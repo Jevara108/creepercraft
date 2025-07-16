@@ -48,7 +48,6 @@ A **production-ready**, **fully-featured** Minecraft server website template bui
 
 1. **Clone or download** this template
 ```bash
-git clone https://github.com/bytekron/creepercraft-template.git
 cd creepercraft-template
 ```
 
