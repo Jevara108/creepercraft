@@ -74,8 +74,8 @@ interface StaffMember {
 const staffMembers: StaffMember[] = [
   {
     id: 1,
-    name: 'CreeperKing',
-    role: 'Server Owner',
+    name: 'Jevara_VG',
+    role: 'MightyMC Owner',
     roleType: 'owner',
     description: 'Founder and visionary behind CreeperCraft. Oversees all server operations and community growth.',
     avatar: 'https://mc-heads.net/avatar/CreeperKing/128',
