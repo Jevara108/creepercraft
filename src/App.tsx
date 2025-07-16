@@ -103,7 +103,7 @@ function App() {
    * @function copyServerIP
    */
   const copyServerIP = () => {
-    navigator.clipboard.writeText('play.creepercraft.net');
+    navigator.clipboard.writeText('premium.mightymc.club');
     setCopied(true);
     
     // Reset copied state after 2 seconds
