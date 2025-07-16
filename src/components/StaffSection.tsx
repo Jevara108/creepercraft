@@ -107,7 +107,7 @@ const staffMembers: StaffMember[] = [
   {
     id: 3,
     name: 'Cudlin',
-    role: 'Dev',
+    role: 'dev',
     roleType: 'developer',
     description: 'Developer and management lead with expertise in overseeing projects, resolving player disputes, and enforcing community rules.',
     avatar: 'https://mc-heads.net/avatar/Cudlin/128',
