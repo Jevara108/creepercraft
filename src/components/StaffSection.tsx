@@ -84,9 +84,9 @@ const staffMembers: StaffMember[] = [
     specialties: ['Server Management', 'Community Building', 'Strategic Planning'],
     online: true,
     timezone: 'EST',
-    contact: 'Discord: CreeperKing#0001',
+    contact: 'Discord: jeafara#8513',
     helpedPlayers: 5000,
-    quote: 'Building the ultimate Minecraft experience, one block at a time.'
+    quote: 'Please make sure you tag the helpers first.'
   },
   {
     id: 2,
@@ -100,7 +100,7 @@ const staffMembers: StaffMember[] = [
     specialties: ['Staff Management', 'Policy Development', 'Conflict Resolution'],
     online: true,
     timezone: 'PST',
-    contact: 'Discord: AdminSteve#0002',
+    contact: 'Discord: MrProfessor_Y#6769',
     helpedPlayers: 3500,
     quote: 'Fair play and fun for everyone!'
   },
@@ -116,7 +116,7 @@ const staffMembers: StaffMember[] = [
     specialties: ['Player Moderation', 'Rule Enforcement', 'Community Events'],
     online: false,
     timezone: 'GMT',
-    contact: 'Discord: ModeratorAlex#0003',
+    contact: 'Discord: Cudlin#9949',
     helpedPlayers: 2800,
     quote: 'Keeping the peace so everyone can enjoy the game.'
   },
