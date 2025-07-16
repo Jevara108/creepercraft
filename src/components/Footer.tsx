@@ -104,7 +104,7 @@ const footerSections: FooterSection[] = [
       { href: 'https://youtube.com/creepercraft', label: 'YouTube', external: true },
       { href: 'https://tiktok.com/@creepercraft', label: 'TikTok', external: true },
       { href: 'https://twitter.com/creepercraft', label: 'Twitter', external: true },
-      { href: 'https://discord.gg/creepercraft', label: 'Discord', external: true }
+      { href: 'https://discord.gg/HskUVye3mr', label: 'Discord', external: true }
     ]
   },
   {
