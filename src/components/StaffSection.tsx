@@ -78,7 +78,7 @@ const staffMembers: StaffMember[] = [
     role: 'MightyMC Owner',
     roleType: 'owner',
     description: 'Founder and visionary behind CreeperCraft. Oversees all server operations and community growth.',
-    avatar: 'https://mc-heads.net/avatar/CreeperKing/128',
+    avatar: 'https://mc-heads.net/avatar/Jevara_VG/128',
     joinDate: '2016-03-15',
     experience: 8,
     specialties: ['Server Management', 'Community Building', 'Strategic Planning'],
