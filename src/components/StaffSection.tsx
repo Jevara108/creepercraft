@@ -48,7 +48,7 @@ interface StaffMember {
   id: number;
   name: string;
   role: string;
-  roleType: 'owner' | 'admin' | 'moderator' | 'helper' | 'developer' | 'builder' | 'man';
+  roleType: 'owner' | 'admin' | 'moderator' | 'helper' | 'developer' | 'builder';
   description: string;
   avatar: string;
   joinDate: string;
