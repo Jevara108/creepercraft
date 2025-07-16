@@ -90,11 +90,11 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 2,
-    name: 'AdminSteve',
+    name: 'MrProfessor_Y',
     role: 'Head Administrator',
     roleType: 'admin',
     description: 'Senior administrator responsible for staff coordination and major server decisions.',
-    avatar: 'https://mc-heads.net/avatar/AdminSteve/128',
+    avatar: 'https://mc-heads.net/avatar/MrProfessor_Y/128',
     joinDate: '2017-06-20',
     experience: 6,
     specialties: ['Staff Management', 'Policy Development', 'Conflict Resolution'],
