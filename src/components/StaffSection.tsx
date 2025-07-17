@@ -115,7 +115,7 @@ const staffMembers: StaffMember[] = [
     experience: 5,
     specialties: ['Player Moderation', 'Rule Enforcement', 'Community Events'],
     online: false,
-    timezone: 'GMT',
+    timezone: 'AU VIC',
     contact: 'Discord: ModeratorAlex#0003',
     helpedPlayers: 2800,
     quote: 'Keeping the peace so everyone can enjoy the game.'
