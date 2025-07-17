@@ -74,17 +74,17 @@ interface StaffMember {
 const staffMembers: StaffMember[] = [
   {
     id: 1,
-    name: 'CreeperKing',
-    role: 'Server Owner',
+    name: 'Jevara_VG',
+    role: 'MightyMC Owner',
     roleType: 'owner',
     description: 'Founder and visionary behind CreeperCraft. Oversees all server operations and community growth.',
-    avatar: 'https://mc-heads.net/avatar/CreeperKing/128',
+    avatar: 'https://mc-heads.net/avatar/Jevara_VG/128',
     joinDate: '2016-03-15',
     experience: 8,
     specialties: ['Server Management', 'Community Building', 'Strategic Planning'],
     online: true,
-    timezone: 'EST',
-    contact: 'Discord: CreeperKing#0001',
+    timezone: 'AU SYD',
+    contact: 'Discord: jeafara#8513',
     helpedPlayers: 5000,
     quote: 'Building the ultimate Minecraft experience, one block at a time.'
   },
@@ -106,7 +106,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 3,
-    name: 'MAx',
+    name: 'IIXEP9',
     role: 'Senior Moderator',
     roleType: 'moderator',
     description: 'Experienced moderator specializing in player disputes and rule enforcement.',
