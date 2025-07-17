@@ -118,21 +118,21 @@ const staffMembers: StaffMember[] = [
     timezone: 'AU VIC',
     contact: 'Discord: iixep9#0181',
     helpedPlayers: 2800,
-    quote: 'Keeping the peace so everyone can enjoy the game.'
+    quote: 'Every new player deserves a warm welcome! Please feel free to message me anytime — I'm available on Discord 24/7, with a typical response time of under 1 hour.'
   },
   {
     id: 4,
-    name: 'ModeratorSarah',
-    role: 'Moderator',
-    roleType: 'moderator',
+    name: 'Cudlin',
+    role: 'Management',
+    roleType: 'developer',
     description: 'Dedicated moderator focusing on new player assistance and chat moderation.',
-    avatar: 'https://mc-heads.net/avatar/ModeratorSarah/128',
+    avatar: 'https://mc-heads.net/avatar/Cudlin/128',
     joinDate: '2019-11-05',
     experience: 4,
     specialties: ['New Player Help', 'Chat Moderation', 'Tutorial Creation'],
     online: true,
-    timezone: 'CET',
-    contact: 'Discord: ModeratorSarah#0004',
+    timezone: 'UTC',
+    contact: 'Discord: Cudlin#9949',
     helpedPlayers: 2200,
     quote: 'Every new player deserves a warm welcome!'
   },
