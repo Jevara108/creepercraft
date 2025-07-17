@@ -106,7 +106,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 3,
-    name: 'ModeratorAlex',
+    name: 'MAx',
     role: 'Senior Moderator',
     roleType: 'moderator',
     description: 'Experienced moderator specializing in player disputes and rule enforcement.',
