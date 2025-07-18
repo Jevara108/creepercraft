@@ -17,7 +17,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Navigation } from './components/Navigation';
+import { Navigation } from './components/Navigation.tsx';
 import { HeroSection } from './components/HeroSection';
 import { RankingsSection } from './components/RankingsSection';
 import { ServerShopSection } from './components/ServerShopSection';
