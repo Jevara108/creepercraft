@@ -74,7 +74,7 @@ interface StaffMember {
 const staffMembers: StaffMember[] = [
   {
     id: 1,
-    name: 'CreeperKing',
+    name: 'Jevara_VG',
     role: 'Server Owner',
     roleType: 'owner',
     description: 'Founder and visionary behind CreeperCraft. Oversees all server operations and community growth.',
@@ -90,7 +90,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 2,
-    name: 'AdminSteve',
+    name: 'MrProfessor_Y',
     role: 'Head Administrator',
     roleType: 'admin',
     description: 'Senior administrator responsible for staff coordination and major server decisions.',
@@ -106,7 +106,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 3,
-    name: 'ModeratorAlex',
+    name: 'Cudlin',
     role: 'Senior Moderator',
     roleType: 'moderator',
     description: 'Experienced moderator specializing in player disputes and rule enforcement.',
@@ -122,7 +122,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 4,
-    name: 'ModeratorSarah',
+    name: 'IIXEP9',
     role: 'Moderator',
     roleType: 'moderator',
     description: 'Dedicated moderator focusing on new player assistance and chat moderation.',
