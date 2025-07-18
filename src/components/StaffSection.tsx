@@ -138,7 +138,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 5,
-    name: 'DevMaster',
+    name: 'Tyler',
     role: 'Lead Developer',
     roleType: 'developer',
     description: 'Technical lead responsible for server plugins, features, and performance optimization.',
