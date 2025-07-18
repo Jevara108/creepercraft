@@ -18,16 +18,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { Navigation } from './components/Navigation.tsx';
-import { HeroSection } from './components/HeroSection';
-import { RankingsSection } from './components/RankingsSection';
-import { ServerShopSection } from './components/ServerShopSection';
-import { ServerMapSection } from './components/ServerMapSection';
-import { VoteSection } from './components/VoteSection';
-import { BansSection } from './components/BansSection';
-import { StaffSection } from './components/StaffSection';
-import { FAQSection } from './components/FAQSection';
-import { Footer } from './components/Footer';
-import { BackToTopButton } from './components/BackToTopButton';
+import { HeroSection } from './components/HeroSection.tsx';
+import { RankingsSection } from './components/RankingsSection.tsx';
+import { ServerShopSection } from './components/ServerShopSection.tsx';
+import { ServerMapSection } from './components/ServerMapSection.tsx';
+import { VoteSection } from './components/VoteSection.tsx';
+import { BansSection } from './components/BansSection.tsx';
+import { StaffSection } from './components/StaffSection.tsx';
+import { FAQSection } from './components/FAQSection.tsx';
+import { Footer } from './components/Footer.tsx';
+import { BackToTopButton } from './components/BackToTopButton.tsx';
 
 /**
  * Main App Component
