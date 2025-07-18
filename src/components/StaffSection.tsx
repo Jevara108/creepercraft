@@ -154,7 +154,7 @@ const staffMembers: StaffMember[] = [
   },
   {
     id: 6,
-    name: 'BuilderPro',
+    name: 'Jekar',
     role: 'Master Builder',
     roleType: 'builder',
     description: 'Creative architect designing spawn areas, dungeons, and custom structures.',
