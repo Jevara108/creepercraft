@@ -118,7 +118,7 @@ const staffMembers: StaffMember[] = [
     timezone: 'AU VIC',
     contact: 'Discord: iixep9#0181',
     helpedPlayers: 2800,
-    quote: 'Every new player deserves a warm welcome! Please feel free to message me anytime, I'm available on Discord 24/7, with a typical response time of under 1 hour.'
+    quote: 'Every new player deserves a warm welcome! Please feel free to message me anytime, 'I'm available on Discord 24/7', 'with a typical response time of under 1 hour.'
   },
   {
     id: 4,
