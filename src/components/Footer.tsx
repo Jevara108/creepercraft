@@ -239,7 +239,7 @@ export const Footer: React.FC<FooterProps> = ({ playerCount }) => {
                 <CreeperHeadIcon />
               </div>
               <span className="text-lg sm:text-xl font-bold text-white tracking-wider">
-                CREEPERCRAFT
+                MightyMC
               </span>
             </div>
             <p className="text-light-gray text-sm mb-2">
