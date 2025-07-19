@@ -100,10 +100,10 @@ const footerSections: FooterSection[] = [
   {
     title: 'Social Media',
     links: [
-      { href: 'https://facebook.com/creepercraft', label: 'Facebook', external: true },
-      { href: 'https://youtube.com/creepercraft', label: 'YouTube', external: true },
-      { href: 'https://tiktok.com/@creepercraft', label: 'TikTok', external: true },
-      { href: 'https://twitter.com/creepercraft', label: 'Twitter', external: true },
+      { href: 'https://facebook.com/mightymc', label: 'Facebook', external: true },
+      { href: 'https://youtube.com/mightymc', label: 'YouTube', external: true },
+      { href: 'https://tiktok.com/@mightymc', label: 'TikTok', external: true },
+      { href: 'https://twitter.com/mightymc', label: 'Twitter', external: true },
       { href: 'https://discord.gg/HskUVye3mr', label: 'Discord', external: true }
     ]
   },
