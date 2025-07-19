@@ -699,7 +699,7 @@ export const BansSection: React.FC = () => {
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Unban Service</h3>
                   <p className="text-sm sm:text-base text-light-gray">
-                    Appeal your ban or request an unban review through our official channels
+                    Appeal your ban or request an unban review through our official MightyMC channels
                   </p>
                 </div>
               </div>
@@ -720,7 +720,7 @@ export const BansSection: React.FC = () => {
                           href="mailto:appeals@creepercraft.net"
                           className="text-blue-400 hover:text-blue-300 text-xs sm:text-sm font-medium break-all"
                         >
-                          appeals@creepercraft.net
+                          MightyMC@gmail.com
                         </a>
                       </div>
                     </div>
@@ -733,7 +733,7 @@ export const BansSection: React.FC = () => {
                       <div className="flex-1 min-w-0">
                         <h4 className="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Discord Appeal</h4>
                         <p className="text-light-gray text-xs sm:text-sm mb-2">
-                          Join our Discord and create a ticket in #appeals
+                          Join our Discord and create a ticket in #Support
                         </p>
                         <button className="text-blue-400 hover:text-blue-300 text-xs sm:text-sm font-medium flex items-center space-x-1">
                           <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
@@ -750,10 +750,10 @@ export const BansSection: React.FC = () => {
                       <div className="flex-1 min-w-0">
                         <h4 className="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Premium Unban</h4>
                         <p className="text-light-gray text-xs sm:text-sm mb-2 sm:mb-3">
-                          Fast-track unban service (24h response)
+                          We will unban you from server less than (24h response)
                         </p>
                         <button className="btn bg-yellow-600 hover:bg-yellow-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-2">
-                          Purchase for €25
+                          Purchase for $30
                         </button>
                       </div>
                     </div>
@@ -809,7 +809,7 @@ export const BansSection: React.FC = () => {
                 <Shield className="w-8 h-8 text-purple-400 mx-auto mb-3" />
                 <h4 className="text-white font-semibold mb-2">Professional Staff</h4>
                 <p className="text-light-gray text-sm">
-                  Our moderation team is trained to handle situations fairly and consistently
+                  Our moderation team follows clear guidelines to ensure every situation is handled with fairness and consistency 
                 </p>
               </div>
             </div>
