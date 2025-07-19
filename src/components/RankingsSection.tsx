@@ -155,7 +155,7 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * a temporary success message.
    */
   const copyServerIP = () => {
-    navigator.clipboard.writeText('play.creepercraft.net');
+    navigator.clipboard.writeText('premium.mightymc.club');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
