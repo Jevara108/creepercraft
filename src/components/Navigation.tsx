@@ -78,7 +78,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
               <CreeperHeadIcon />
             </div>
             {/* Brand name with responsive typography */}
-            <span className="text-lg sm:text-xl font-bold text-white">CREEPERCRAFT</span>
+            <span className="text-lg sm:text-xl font-bold text-white">MighyMC</span>
           </div>
           
           {/* 
