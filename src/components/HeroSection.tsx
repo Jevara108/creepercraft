@@ -205,8 +205,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           "CREEPER" in white, "CRAFT" in green for brand recognition
         */}
         <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 sm:mb-6 tracking-wider animate-fade-in-up text-shadow-lg leading-tight">
-          <span className="text-white">Mighty</span>
-          <span className="text-grass-green opacity-90">MC</span>
+          <span className="text-pink-500">Mighty</span>
+          <span className="text-pink-500 opacity-90">MC</span>
         </h1>
         
         {/* 
