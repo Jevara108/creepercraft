@@ -260,7 +260,7 @@ export const Footer: React.FC<FooterProps> = ({ playerCount }) => {
           {/* Copyright Information */}
           <div className="text-mid-gray text-xs text-center lg:text-left">
             <p className="mb-1">
-              © 2025 CREEPERCRAFT sp. z o.o. All rights reserved 2016 – 2025
+              © MightyMC sp. 2023–2025. All rights reserved
             </p>
             <p>
               This server is not affiliated with Mojang AB.
