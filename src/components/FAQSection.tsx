@@ -269,7 +269,7 @@ export const FAQSection: React.FC = () => {
           </h2>
           <div className="w-16 h-1 bg-grass-green mx-auto mb-4"></div>
           <p className="text-lg text-light-gray max-w-2xl mx-auto">
-            Find answers to common questions about CreeperCraft server, gameplay, and features
+            Find answers to common questions about MightyMC server, gameplay, and features
           </p>
         </div>
 
