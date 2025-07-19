@@ -424,7 +424,7 @@ export const VoteSection: React.FC = () => {
           </h2>
           <div className="w-16 h-1 bg-yellow-500 mx-auto mb-4"></div>
           <p className="text-lg text-light-gray max-w-2xl mx-auto">
-            Vote for CreeperCraft on server lists to earn amazing rewards and help us grow our community
+            Vote for MightyMC on server lists to earn amazing rewards and help us grow our community
           </p>
         </div>
 
@@ -623,7 +623,7 @@ export const VoteSection: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Help Us Reach #1!</h3>
             <p className="text-light-gray mb-6 leading-relaxed">
-              Every vote helps CreeperCraft climb the server rankings and brings more players to our amazing community. 
+              Every vote helps MightyMC climb the server rankings and brings more players to our amazing community. 
               Vote daily to earn incredible rewards and support your favorite server!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
