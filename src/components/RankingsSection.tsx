@@ -309,7 +309,7 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
                     JOIN OUR SERVER NOW
                   </div>
                   <div className="text-sm text-light-gray">
-                    play.creepercraft.net
+                    premium.mightymc.club
                   </div>
                 </div>
               </div>
