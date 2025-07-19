@@ -104,7 +104,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
           */}
           <div className="hidden lg:block flex-shrink-0">
             <button className="btn btn-green text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
-              SERVER SHOP
+              MightyMC SHOP
             </button>
           </div>
 
