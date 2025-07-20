@@ -86,22 +86,22 @@ const faqData: FAQItem[] = [
   // General Questions
   {
     id: 1,
-    question: "How do I join the CreeperCraft server?",
-    answer: "Simply add 'play.creepercraft.net' to your Minecraft server list and connect! Make sure you're using the latest version of Minecraft Java Edition. No mods or special setup required.",
+    question: "How do I join the MightyMC server?",
+    answer: "Simply add 'Mightymc.club' if you're using cracked Minecraft to join the server! For premium Minecraft, please make sure you're using 'premium.Mightymc.club' after joining mightymc.club to confirm you're using a premium account. No mods or special setup required.",
     category: 'general',
     icon: <Server className="w-5 h-5" />
   },
   {
     id: 2,
     question: "What version of Minecraft do you support?",
-    answer: "We support Minecraft Java Edition versions 1.19.x to 1.21.x. We recommend using the latest stable version for the best experience and access to all features.",
+    answer: "We support Minecraft Java Edition versions 1.8.8.x to 1.21.x. All Minecraft versions are supported.",
     category: 'technical',
     icon: <Server className="w-5 h-5" />
   },
   {
     id: 3,
     question: "Is the server available 24/7?",
-    answer: "Yes! CreeperCraft runs 24/7 with 99.9% uptime. Our dedicated servers ensure you can play anytime, anywhere. We perform brief maintenance during off-peak hours when necessary.",
+    answer: "Yes! MightyMC runs 24/7 with 99.9% uptime. Our dedicated servers ensure you can play anytime, anywhere. We perform brief maintenance during off-peak hours when necessary.",
     category: 'technical',
     icon: <Zap className="w-5 h-5" />
   },
@@ -109,22 +109,22 @@ const faqData: FAQItem[] = [
   // Gameplay Questions
   {
     id: 4,
-    question: "What is Hardcore mode and how does it work?",
-    answer: "Our Hardcore mode features permanent death with high-stakes gameplay. When you die, you lose all items and must restart. However, VIP members get special resurrection abilities and item protection features.",
+    question: "What can I play in MightyMC server?",
+    answer: "Right now, we have PvP, Bedwars, Skywars, amazing Practice, and Speedbuilders available for you to enjoy — and remember, this is just the beginning!",
     category: 'gameplay',
     icon: <Shield className="w-5 h-5" />
   },
   {
     id: 5,
     question: "Can I play with friends and create teams?",
-    answer: "Absolutely! You can create or join guilds with up to 20 members. Guild members can share resources, build together, and compete in guild wars. Use /guild create [name] to start your own guild.",
+    answer: "Absolutely! You can create or join guilds with up to 20 members. If you're looking to expand your guild even further, MightyMC got your back, we recommend getting a rank to invite more players to your crew!",
     category: 'gameplay',
     icon: <Users className="w-5 h-5" />
   },
   {
     id: 6,
     question: "Are there any banned items or restrictions?",
-    answer: "We maintain a balanced gameplay experience by restricting certain overpowered items like bedrock, command blocks, and some enchanted items above level 5. TNT is limited in spawn areas but allowed in designated PvP zones.",
+    answer: "The only players who will be banned are those who cheat or use glitches. We don’t forgive, and we don’t forget.",
     category: 'rules',
     icon: <Shield className="w-5 h-5" />
   },
@@ -133,21 +133,21 @@ const faqData: FAQItem[] = [
   {
     id: 7,
     question: "What payment methods do you accept?",
-    answer: "We accept PayPal, credit/debit cards (Visa, MasterCard, American Express), and various digital payment methods. All transactions are secured with SSL encryption for your safety.",
+    answer: "We accept PayPal, credit/debit cards (Visa, MasterCard, American Express), and various digital payment methods.",
     category: 'payment',
     icon: <Coins className="w-5 h-5" />
   },
   {
     id: 8,
     question: "Do VIP ranks expire or are they permanent?",
-    answer: "VIP and SVIP ranks are monthly subscriptions that auto-renew. VIP Lifetime is a one-time purchase that never expires. You can cancel subscriptions anytime from your account dashboard.",
+    answer: "VIP and Emerald ranks are monthly subscriptions that auto-renew.You can cancel subscriptions anytime from your account dashboard.",
     category: 'payment',
     icon: <Coins className="w-5 h-5" />
   },
   {
     id: 9,
     question: "Can I get a refund if I'm not satisfied?",
-    answer: "We offer a 7-day money-back guarantee for all purchases. If you're not completely satisfied with your VIP experience, contact our support team for a full refund within 7 days of purchase.",
+    answer: "Currently, we cannot offer refunds for rank purchases because all rank benefits and specials are clearly listed. Please make sure to read the rank description carefully before making a purchase.",
     category: 'payment',
     icon: <Coins className="w-5 h-5" />
   },
@@ -156,21 +156,21 @@ const faqData: FAQItem[] = [
   {
     id: 10,
     question: "What are the main server rules?",
-    answer: "Key rules include: No griefing in safe zones, no cheating/hacking, respect all players, no spam in chat, and follow staff instructions. Breaking rules results in warnings, temporary bans, or permanent bans depending on severity.",
+    answer: "Key rules include: No cheating/hacking, respect all players, no spam in chat, and follow staff instructions. Breaking rules results in warnings, temporary bans, or permanent bans depending on severity.",
     category: 'rules',
     icon: <Shield className="w-5 h-5" />
   },
   {
     id: 11,
     question: "How do I report a player or get help?",
-    answer: "Use /report [player] [reason] in-game, join our Discord support channel, or contact staff directly. We have 24/7 moderation and respond to reports within 30 minutes during peak hours.",
+    answer: "Use /report [player] [reason] in-game, join our Discord support channel, or contact staff directly for assistance. If you record your gameplay and faced a cheater, you can join our server Discord and request a Mod to join your call and punish the cheater.",
     category: 'rules',
     icon: <HelpCircle className="w-5 h-5" />
   },
   {
     id: 12,
     question: "Can I stream or create content about the server?",
-    answer: "Yes! We encourage content creation. Tag us @CreeperCraft on social media and we might feature your content. Popular streamers can apply for our Creator Program for special perks and early access to updates.",
+    answer: "Yes! We encourage content creation. Tag us in the MightyMC Discord, and we might feature your content. You can also apply for the YouTuber rank if you meet the requirements: at least 10,000 subscribers and a minimum of 2 videos about our server.",
     category: 'general',
     icon: <Users className="w-5 h-5" />
   }
