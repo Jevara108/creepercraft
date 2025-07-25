@@ -338,4 +338,5 @@ const YourComponent = () => {
   fetchPlayerCount();
   const interval = setInterval(fetchPlayerCount, 30000);
   return () => clearInterval(interval);
+   );
 };
