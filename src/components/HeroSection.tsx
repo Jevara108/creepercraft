@@ -18,6 +18,7 @@ import { TikTokIcon } from './icons/TikTokIcon';
 import { TwitterIcon } from './icons/TwitterIcon';
 import { DiscordIcon } from './icons/DiscordIcon';
 import { CreeperHeadIcon } from './icons/CreeperHeadIcon';
+import { useEffect, useState } from 'react';
 
 // ==================== INTERFACES ====================
 
@@ -308,3 +309,36 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     </section>
   );
 };
+
+const YourComponent = () => {
+  const [playerCount, setPlayerCount] = useState(0);
+
+  useEffect(() => {
+    const fetchPlayerCount = async () => {
+      try {
+        const res = await fetch('https://api.mcsrvstat.us/2/178.33.104.166:25565');
+        const data = await res.json();
+        if (data.online) {
+          setPlayerCount(data.players.online);
+        } else {
+          setPlayerCount(0);
+        }
+      } catch (err) {
+        console.error('Error fetching player count:', err);
+        setPlayerCount(0);
+      }
+    };
+
+    fetchPlayerCount();
+    const interval = setInterval(fetchPlayerCount, 30000); // Refresh every 30s
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      {/* Your existing JSX — update {playerCount} where needed */}
+      <div className="text-white font-bold text-lg sm:text-xl">{playerCount} Players</div>
+    </div>
+  );
+};
+
