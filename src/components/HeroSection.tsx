@@ -313,32 +313,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 const YourComponent = () => {
   const [playerCount, setPlayerCount] = useState(0);
 
-  useEffect(() => {
-    const fetchPlayerCount = async () => {
-      try {
-        const res = await fetch('https://api.mcstatus.io/v2/status/java/178.33.104.166:25565');
-        const data = await res.json();
-        if (data.online) {
-          setPlayerCount(data.players.online);
-        } else {
-          setPlayerCount(0);
-        }
-      } catch (err) {
-        console.error('Error fetching player count:', err);
+ useEffect(() => {
+  const fetchPlayerCount = async () => {
+    try {
+      const res = await fetch('https://api.mcstatus.io/v2/status/java/178.33.104.166:25565');
+      const headers = {
+        cacheHit: res.headers.get('X-Cache-Hit'),
+        cacheRem: res.headers.get('X-Cache-Time-Remaining')
+      };
+      const data = await res.json();
+
+      console.log('API headers:', headers);
+      if (data?.online && typeof data.players.online === 'number') {
+        setPlayerCount(data.players.online);
+      } else {
         setPlayerCount(0);
       }
-    };
+    } catch (err) {
+      console.error('Fetch error:', err);
+      setPlayerCount(0);
+    }
+  };
 
-    fetchPlayerCount();
-    const interval = setInterval(fetchPlayerCount, 30000); // Refresh every 30s
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div>
-      {/* Your existing JSX — update {playerCount} where needed */}
-      <div className="text-white font-bold text-lg sm:text-xl">{playerCount} Players</div>
-    </div>
-  );
-};
-
+  fetchPlayerCount();
+  const interval = setInterval(fetchPlayerCount, 30000);
+  return () => clearInterval(interval);
+}, []);
