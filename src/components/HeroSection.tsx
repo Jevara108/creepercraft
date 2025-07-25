@@ -19,6 +19,7 @@ import { TwitterIcon } from './icons/TwitterIcon';
 import { DiscordIcon } from './icons/DiscordIcon';
 import { CreeperHeadIcon } from './icons/CreeperHeadIcon';
 import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // ==================== INTERFACES ====================
 
@@ -341,3 +342,38 @@ useEffect(() => {
     </div>
   );
 };
+
+const DiscordOnlineCount = () => {
+  const [onlineCount, setOnlineCount] = useState(0);
+
+  useEffect(() => {
+    const fetchOnlineCount = async () => {
+      try {
+        const res = await fetch('https://discord.com/api/guilds/956030048610160711/widget.json');
+        const data = await res.json();
+
+        if (data && data.presence_count != null) {
+          setOnlineCount(data.presence_count);
+        } else {
+          setOnlineCount(0);
+        }
+      } catch (err) {
+        console.error('Error fetching Discord data:', err);
+        setOnlineCount(0);
+      }
+    };
+
+    fetchOnlineCount();
+    const interval = setInterval(fetchOnlineCount, 30000); // refresh every 30s
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="text-white font-bold text-lg sm:text-xl">
+      {onlineCount} Online
+    </div>
+  );
+};
+
+export default DiscordOnlineCount;
+
