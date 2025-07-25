@@ -316,7 +316,7 @@ const YourComponent = () => {
   useEffect(() => {
     const fetchPlayerCount = async () => {
       try {
-        const res = await fetch('https://api.mcsrvstat.us/2/178.33.104.166:25565');
+        const res = await fetch('https://api.mcsrvstat.us/2/mightymc.club');
         const data = await res.json();
         if (data.online) {
           setPlayerCount(data.players.online);
