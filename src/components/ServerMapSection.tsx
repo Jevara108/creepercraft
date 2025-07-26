@@ -116,27 +116,27 @@ const biomes: BiomeConfig[] = [
     isSpawn: true
   },
   {
-    name: 'Golden Dunes',
-    description: 'Vast desert with hidden temples',
+    name: 'COMING SOON',
+    description: 'Soon we will post voing for new games',
     icon: '🏜️',
     cssClass: 'desert-biome'
   },
   // Row 3
   {
-    name: 'Deep Ocean',
-    description: 'Mysterious underwater ruins',
+    name: 'COMING SOON',
+    description: 'Soon we will post voing for new games',
     icon: '🌊',
     cssClass: 'ocean-biome'
   },
   {
-    name: 'Emerald Jungle',
-    description: 'Dense jungle with ancient temples',
+    name: 'COMING SOON',
+    description: 'Soon we will post voing for new games',
     icon: '🌿',
     cssClass: 'jungle-biome'
   },
   {
-    name: 'Nether Portal',
-    description: 'Gateway to the underworld',
+    name: 'COMING SOON',
+    description: 'Soon we will post voing for new games',
     icon: '🔥',
     cssClass: 'nether-biome'
   }
