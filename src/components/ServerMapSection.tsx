@@ -84,20 +84,20 @@ interface MapStats {
 const biomes: BiomeConfig[] = [
   // Row 1
   {
-    name: 'Frozen Peaks',
-    description: 'Icy mountains with rare crystals',
-    icon: '❄️',
-    cssClass: 'ice-biome'
+    name: 'Bedwars',
+    description: 'No bed, no respawn. Fight smart!',
+    icon: '🛏️',
+    cssClass: 'dream-biome'
   },
   {
-    name: 'Dragon\'s Ridge',
-    description: 'Ancient peaks hiding secrets',
-    icon: '⛰️',
-    cssClass: 'mountain-biome'
+    name: 'Practice',
+    description: 'Sharpen your PvP skills in 1v1 duels',
+    icon: '⚔️',
+    cssClass: 'plains-biome'
   },
   {
-    name: 'Sky Islands',
-    description: 'Floating islands in the clouds',
+    name: 'Skywars',
+    description: 'Battle across floating islands in the sky!',
     icon: '☁️',
     cssClass: 'sky-biome'
   },
