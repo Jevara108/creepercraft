@@ -270,9 +270,9 @@ export const Footer: React.FC<FooterProps> = ({ playerCount }) => {
           {/* Developer Attribution and Decorative Elements */}
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
             <span className="text-mid-gray text-xs">
-              Coded with ❤️ by{' '}
+              {' '}
               <a 
-                href="https://bytekron.com" 
+                href="" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-grass-green hover:text-green-400 transition-colors duration-200 font-medium"
