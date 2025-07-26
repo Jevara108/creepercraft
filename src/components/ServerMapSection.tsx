@@ -294,9 +294,9 @@ export const ServerMapSection: React.FC = () => {
         {/* Header Section - Responsive */}
         <div className="text-center mb-8 sm:mb-12">
           <span className="inline-block bg-grass-green text-primary-dark text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-bold mb-3 sm:mb-4 uppercase tracking-wider">
-            EXPLORE THE WORLD
+            EXPLORE THE SERVER MINIGAMES
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3 sm:mb-4 text-white tracking-wider uppercase">SERVER MAP</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3 sm:mb-4 text-white tracking-wider uppercase">SERVER GAMES</h2>
           <div className="w-12 sm:w-16 h-1 bg-grass-green mx-auto mb-3 sm:mb-4"></div>
           <p className="text-sm sm:text-base lg:text-lg text-light-gray max-w-xl lg:max-w-2xl mx-auto px-4">
             Discover vast landscapes, hidden treasures, and epic adventures across our custom-built world
