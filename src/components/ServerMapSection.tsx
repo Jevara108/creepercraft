@@ -93,7 +93,7 @@ const biomes: BiomeConfig[] = [
     name: 'Practice',
     description: 'Sharpen your PvP skills in 1v1 duels',
     icon: '⚔️',
-    cssClass: 'plains-biome'
+    cssClass: 'nether-biome'
   },
   {
     name: 'Skywars',
@@ -103,15 +103,15 @@ const biomes: BiomeConfig[] = [
   },
   // Row 2
   {
-    name: 'Mystic Forest',
-    description: 'Enchanted woods full of magic',
-    icon: '🌲',
+    name: 'SpeedBuilders',
+    description: 'Rebuild structures fast in a magic forest',
+    icon: '🛠️',
     cssClass: 'forest-biome'
   },
   {
-    name: 'Central Hub',
-    description: 'Main spawn and trading center',
-    icon: '🏰',
+    name: 'PvP',
+    description: 'Fight in the ultimate combat zone',
+    icon: '🗡️',
     cssClass: 'spawn-biome',
     isSpawn: true
   },
