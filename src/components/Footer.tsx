@@ -278,7 +278,7 @@ export const Footer: React.FC<FooterProps> = ({ playerCount }) => {
                 className="text-grass-green hover:text-green-400 transition-colors duration-200 font-medium"
                 aria-label="Bytekron - Web Development Agency (opens in new tab)"
               >
-                Bytekron
+                
               </a>
             </span>
             
