@@ -315,25 +315,26 @@ const YourComponent = () => {
   const [playerCount, setPlayerCount] = useState(0);
 
 useEffect(() => {
-    const fetchPlayerCount = async () => {
-      try {
-        const res = await fetch('https://api.mcsrvstat.us/2/178.33.104.166:25565');
-        const data = await res.json();
-        if (data.online) {
-          setPlayerCount(data.players.online);
-        } else {
-          setPlayerCount(0);
-        }
-      } catch (err) {
-        console.error('Error fetching player count:', err);
+  const fetchPlayerCount = async () => {
+    try {
+      const res = await fetch('https://api.mcsrvstat.us/2/178.33.104.166:25565');
+      const data = await res.json();
+      console.log("API response:", data); // <-- Add this
+      if (data.online && data.players?.online !== undefined) {
+        setPlayerCount(data.players.online);
+      } else {
         setPlayerCount(0);
       }
-    };
+    } catch (err) {
+      console.error('Error fetching player count:', err);
+      setPlayerCount(0);
+    }
+  };
 
-    fetchPlayerCount();
-    const interval = setInterval(fetchPlayerCount, 30000); // Refresh every 30s
-    return () => clearInterval(interval);
-  }, []);
+  fetchPlayerCount();
+  const interval = setInterval(fetchPlayerCount, 30000);
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <div>
