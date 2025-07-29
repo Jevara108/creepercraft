@@ -349,7 +349,7 @@ const DiscordOnlineCount = () => {
   useEffect(() => {
     const fetchOnlineCount = async () => {
       try {
-        const res = await fetch('https://discord.com/invite/HskUVye3mr');
+        const res = await fetch('https://discord.com/api/guilds/956030048610160711/widget.json');
         const data = await res.json();
 
         if (data && data.presence_count != null) {
