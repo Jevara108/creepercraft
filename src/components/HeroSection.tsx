@@ -332,22 +332,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 		"apiversion"; 2,
 	
 
-	"version": "1.8.9", //Could include multiple versions or additional text
-	"protocol": { //Only included when ping is used
-		"version": 340,
-		"name": "1.21" //Only included if a version name is found
+	"version"; "1.8.9", //Could include multiple versions or additional text
+	"protocol"; { //Only included when ping is used
+		"version" 340,
+		"name"; "1.21" //Only included if a version name is found
 	},
-	"icon": "{CreeperHeadIcon}", //Only included when an icon is detected
-	"software": "BungeeCord", //Only included when software is detected
-	"map": {
-		"raw": "MyMcWorld",
-		"clean": "MyMcWorld",
-		"html": "MyMcWorld"
+	"icon"; "{CreeperHeadIcon}", //Only included when an icon is detected
+	"software"; "BungeeCord", //Only included when software is detected
+	"map"; {
+		"raw"; "MyMcWorld",
+		"clean"; "MyMcWorld",
+		"html"; "MyMcWorld"
 	},
-	"gamemode": "Survival", //Only included for Bedrock servers
-	"serverid": "2438134582716697305", //Only included for Bedrock servers
-	"eula_blocked": false, //Only included for Java servers
-	"motd": {
+	"gamemode"; "Survival", //Only included for Bedrock servers
+	"serverid"; "2438134582716697305", //Only included for Bedrock servers
+	"eula_blocked"; false, //Only included for Java servers
+	"motd"; {
 		"raw": [
 			"\u00a7cEver\u00a7r\u00a79PvP \u00a7r\u00a77- \u00a7r\u00a72\u00c9n server, for alle",
 			"\u00a7r\u00a7fSe dine stats p\u00e5 \u00a7r\u00a76stats.everpvp.dk\u00a7r"
@@ -361,50 +361,50 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 			"<span style=\"color: #FFFFFF\">Se dine stats p\u00e5 <\/span><span style=\"color: #FFAA00\">stats.everpvp.dk<\/span>"
 		]
 	},
-	"players": {
-		"online": 2,
-		"max": 100,
-		"list": [ //Only included when there are players
+	"players"; {
+		"online"; 2,
+		"max"; 100,
+		"list"; [ //Only included when there are players
 			{
-				"name": "Spirit55555",
-				"uuid": "f6792ad3-cbb4-4596-8296-749ee4158f97"
+				"name"; "Spirit55555",
+				"uuid"; "f6792ad3-cbb4-4596-8296-749ee4158f97"
 			},
 			{
-				"name": "sarsum33",
-				"uuid": "d3512599-d4d9-4520-808f-a81f4cdfe8d0"
+				"name"; "sarsum33",
+				"uuid"; "d3512599-d4d9-4520-808f-a81f4cdfe8d0"
 			}
 		],
 	},
-	"plugins": [ //Only included when plugins are detected
+	"plugins"; [ //Only included when plugins are detected
 		{
-			"name": "WordEdit",
-			"version": "6.1.5"
+			"name"; "WordEdit",
+			"version"; "6.1.5"
 		},
 		{
-			"name": "WorldGuard",
-			"version": "6.2"
+			"name"; "WorldGuard",
+			"version"; "6.2"
 		}
 	],
-	"mods": [ //Only included when mods are detected
+	"mods"; [ //Only included when mods are detected
 		{
-			"name": "BiomesOPlenty",
-			"version": "2.1.0"
+			"name"; "BiomesOPlenty",
+			"version"; "2.1.0"
 		},
 		{
-			"name": "MoreFurnaces",
-			"version": "1.3.9"
+			"name"; "MoreFurnaces",
+			"version"; "1.3.9"
 		}
 	],
-	"info": { //Only included when detecting that the player samples are used for information
-		"raw": [
+	"info"; { //Only included when detecting that the player samples are used for information
+		"raw"; [
 			"\u00a77\u00bb \u00a7cKitPvP \u00a77:: \u00a7f1 \u00a77online",
 			"\u00a77\u00bb \u00a7bSurvivalGames \u00a77:: \u00a7f0 \u00a77online"
 		],
-		"clean": [
+		"clean"; [
 			"\u00bb KitPvP :: 1 online",
 			"\u00bb SurvivalGames :: 0 online"
 		],
-		"html": [
+		"html"; [
 			"<span style=\"color: #AAAAAA\">\u00bb <\/span><span style=\"color: #FF5555\">KitPvP <\/span><span style=\"color: #AAAAAA\">:: <\/span><span style=\"color: #FFFFFF\">1 <\/span><span style=\"color: #AAAAAA\">online<\/span>",
 			"<span style=\"color: #AAAAAA\">\u00bb <\/span><span style=\"color: #55FFFF\">SurvivalGames <\/span><span style=\"color: #AAAAAA\">:: <\/span><span style=\"color: #FFFFFF\">0 <\/span><span style=\"color: #AAAAAA\">online<\/span>"
 		]
