@@ -343,7 +343,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 		"raw"; "MyMcWorld",
 		"clean"; "MyMcWorld",
 		"html"; "MyMcWorld"
-	},
+	}
 	"gamemode"; "Survival", //Only included for Bedrock servers
 	"serverid"; "2438134582716697305", //Only included for Bedrock servers
 	"eula_blocked"; false, //Only included for Java servers
