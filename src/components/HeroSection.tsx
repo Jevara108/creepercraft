@@ -377,8 +377,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 	
 	"plugins"; [ //Only included when plugins are detected
 		{
-			"name"; "WordEdit",
-			"version"; "6.1.5"
+			"name": "WordEdit",
+			"version": "6.1.5"
 		},
 		{
 			"name"; "WorldGuard",
