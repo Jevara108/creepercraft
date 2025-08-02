@@ -381,18 +381,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 			"version": "6.1.5"
 		},
 		{
-			"name"; "WorldGuard",
-			"version"; "6.2"
+			"name": "WorldGuard",
+			"version": "6.2"
 		}
 	]
 	"mods"; [ //Only included when mods are detected
 		{
-			"name"; "BiomesOPlenty",
-			"version"; "2.1.0"
+			"name": "BiomesOPlenty",
+			"version": "2.1.0"
 		},
 		{
-			"name"; "MoreFurnaces",
-			"version"; "1.3.9"
+			"name": "MoreFurnaces",
+			"version": "1.3.9"
 		}
 	],
 	"info"; { //Only included when detecting that the player samples are used for information
