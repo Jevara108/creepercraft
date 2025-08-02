@@ -334,7 +334,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
 	"version"; "1.8.9", //Could include multiple versions or additional text
 	"protocol"; { //Only included when ping is used
-		"version" 340,
+		"version"; "340",
 		"name"; "1.21" //Only included if a version name is found
 	},
 	"icon"; "{CreeperHeadIcon}", //Only included when an icon is detected
