@@ -366,7 +366,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 		"max"; 100,
 		"list"; [ //Only included when there are players
 			{
-				"name"; "Spirit55555",
+				"name": "Spirit55555",
 				"uuid"; "f6792ad3-cbb4-4596-8296-749ee4158f97"
 			},
 			{
