@@ -410,4 +410,3 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 		]
 	}
 }
-
