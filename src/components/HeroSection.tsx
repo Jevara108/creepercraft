@@ -374,7 +374,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 				"uuid": "d3512599-d4d9-4520-808f-a81f4cdfe8d0"
 			}
 		],
-	}
+	
 	"plugins"; [ //Only included when plugins are detected
 		{
 			"name"; "WordEdit",
