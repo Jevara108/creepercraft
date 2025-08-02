@@ -360,7 +360,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 			"<span style=\"color: #FF5555\">Ever<\/span><span style=\"color: #5555FF\">PvP <\/span><span style=\"color: #AAAAAA\">- <\/span><span style=\"color: #00AA00\">\u00c9n server, for alle<\/span>",
 			"<span style=\"color: #FFFFFF\">Se dine stats p\u00e5 <\/span><span style=\"color: #FFAA00\">stats.everpvp.dk<\/span>"
 		]
-	},
+	}
 	"players"; {
 		"online"; 2,
 		"max"; 100,
@@ -374,7 +374,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 				"uuid"; "d3512599-d4d9-4520-808f-a81f4cdfe8d0"
 			}
 		],
-	},
+	}
 	"plugins"; [ //Only included when plugins are detected
 		{
 			"name"; "WordEdit",
@@ -384,7 +384,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 			"name"; "WorldGuard",
 			"version"; "6.2"
 		}
-	],
+	]
 	"mods"; [ //Only included when mods are detected
 		{
 			"name"; "BiomesOPlenty",
