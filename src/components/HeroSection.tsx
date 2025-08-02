@@ -348,15 +348,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 	"serverid"; "2438134582716697305", //Only included for Bedrock servers
 	"eula_blocked"; false, //Only included for Java servers
 	"motd"; {
-		"raw": [
+		"raw"; [
 			"\u00a7cEver\u00a7r\u00a79PvP \u00a7r\u00a77- \u00a7r\u00a72\u00c9n server, for alle",
 			"\u00a7r\u00a7fSe dine stats p\u00e5 \u00a7r\u00a76stats.everpvp.dk\u00a7r"
 		],
-		"clean": [
+		"clean"; [
 			"EverPvP - \u00c9n server, for alle",
 			"Se dine stats p\u00e5 stats.everpvp.dk"
 		],
-		"html": [
+		"html"; [
 			"<span style=\"color: #FF5555\">Ever<\/span><span style=\"color: #5555FF\">PvP <\/span><span style=\"color: #AAAAAA\">- <\/span><span style=\"color: #00AA00\">\u00c9n server, for alle<\/span>",
 			"<span style=\"color: #FFFFFF\">Se dine stats p\u00e5 <\/span><span style=\"color: #FFAA00\">stats.everpvp.dk<\/span>"
 		]
