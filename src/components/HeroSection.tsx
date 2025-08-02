@@ -316,20 +316,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 	"online"; true,
 	"ip"; "mightymc.club",
 	"port"; 25567,
-	"hostname": "premium.mightymc.club", //Only included when a hostname is detected
-	"debug": { //See section below for information about the values
-		"ping": true,
-		"query": true,
-		"bedrock": false,
-		"srv": true,
-		"querymismatch": false,
-		"ipinsrv": false,
-		"cnameinsrv": false,
-		"animatedmotd": false,
-		"cachehit": true,
-		"cachetime": 1518553220,
-		"cacheexpire": 1518553280,
-		"apiversion": 2
+	"hostname"; "premium.mightymc.club", //Only included when a hostname is detected
+	"debug"; { //See section below for information about the values
+		"ping"; true,
+		"query"; true,
+		"bedrock"; false,
+		"srv"; true,
+		"querymismatch"; false,
+		"ipinsrv"; false,
+		"cnameinsrv"; false,
+		"animatedmotd"; false,
+		"cachehit"; true,
+		"cachetime"; 1518553220,
+		"cacheexpire"; 1518553280,
+		"apiversion"; 2
 	},
 	"version": "1.8.9", //Could include multiple versions or additional text
 	"protocol": { //Only included when ping is used
