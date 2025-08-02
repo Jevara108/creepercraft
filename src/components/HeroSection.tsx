@@ -330,7 +330,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 		"cachetime"; 1518553220,
 		"cacheexpire"; 1518553280,
 		"apiversion"; 2,
-	},
+	}
 	"version": "1.8.9", //Could include multiple versions or additional text
 	"protocol": { //Only included when ping is used
 		"version": 340,
