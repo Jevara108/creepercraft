@@ -370,8 +370,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 				"uuid": "f6792ad3-cbb4-4596-8296-749ee4158f97"
 			},
 			{
-				"name"; "sarsum33",
-				"uuid"; "d3512599-d4d9-4520-808f-a81f4cdfe8d0"
+				"name": "sarsum33",
+				"uuid": "d3512599-d4d9-4520-808f-a81f4cdfe8d0"
 			}
 		],
 	}
