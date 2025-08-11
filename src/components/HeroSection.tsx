@@ -315,7 +315,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 {
 	"online"; true,
 	"ip"; "mightymc.club",
-	"port"; 25567,
+	"port"; 25565,
 	"hostname"; "premium.mightymc.club", //Only included when a hostname is detected
 	"debug"; { //See section below for information about the values
 		"ping"; true,
