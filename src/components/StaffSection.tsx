@@ -16,7 +16,7 @@
  * @component
  * @author CreeperCraft Development Team
  * @version 1.0.2 - Added green selected state and removed help section
- */
+ *//
 
 import React, { useState } from 'react';
 import { Shield, Crown, Star, Users, MessageCircle, Mail, Calendar, Award, Zap, Heart } from 'lucide-react';
