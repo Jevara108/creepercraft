@@ -103,7 +103,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
             Call-to-action button for server shop
           */}
           <div className="hidden lg:block flex-shrink-0">
-            <button className="btn btn-green text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
+            <button className="btn btn-purple text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
               SHOP
             </button>
           </div>
