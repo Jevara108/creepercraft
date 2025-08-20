@@ -89,7 +89,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <a href="#home" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">HOME</a>
             <a href="#ranking" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">RANKING</a>
-            <a href="#shop" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">SHOP</a>
+            <a href="#shop" className="text-light-pruple hover:text-white transition-colors text-sm font-medium nav-link">SHOP</a>
             <a href="#map" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">MAP</a>
             <a href="#vote" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">VOTE</a>
             <a href="#bans" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">BANS</a>
@@ -163,7 +163,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
                   </a>
                   <a 
                     href="#shop" 
-                    className="block px-4 py-3 text-light-gray hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 nav-link"
+                    className="block px-4 py-3 text-light-purple hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 nav-link"
                     onClick={handleLinkClick}
                   >
                     SHOP
