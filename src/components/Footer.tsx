@@ -100,11 +100,11 @@ const footerSections: FooterSection[] = [
   {
     title: 'Social Media',
     links: [
-      { href: 'https://facebook.com/mightymc', label: 'Facebook', external: true },
-      { href: 'https://youtube.com/mightymc', label: 'YouTube', external: true },
-      { href: 'https://tiktok.com/@mightymc', label: 'TikTok', external: true },
-      { href: 'https://twitter.com/mightymc', label: 'Twitter', external: true },
-      { href: 'https://discord.gg/HskUVye3mr', label: 'Discord', external: true }
+      { href: 'https://facebook.com/mightymc', label: 'Facebook', external: false },
+      { href: 'https://youtube.com/mightymc', label: 'YouTube', external: false },
+      { href: 'https://tiktok.com/@mightymc', label: 'TikTok', external: false },
+      { href: 'https://twitter.com/mightymc', label: 'Twitter', external: false },
+      { href: 'https://discord.gg/mightymc', label: 'Discord', external: true }
     ]
   },
   {
