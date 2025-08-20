@@ -68,7 +68,7 @@ const sliderTexts: SliderText[] = [
     suffix: " mode"
   },
   {
-    text: "Battle in epic ",
+    text: "Battle in ",
     highlight: "guild wars",
     suffix: " and claim your territory"
   },
