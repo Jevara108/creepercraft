@@ -76,9 +76,6 @@ interface TabConfig {
  * @constant {TabConfig[]} tabConfigs
  */
 const tabConfigs: TabConfig[] = [
-  { id: 'players', label: 'PLAYER RANKING', dataLabel: 'Player Points' },
-  { id: 'guilds', label: 'GUILD RANKING', dataLabel: 'Guild Points' },
-  { id: 'kills', label: 'KILL RANKING', dataLabel: 'Kills' }
 ];
 
 /**
