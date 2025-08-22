@@ -20,8 +20,8 @@
  * 
  * Display Features:
  * - Podium layout for top 3 positions
- * - Crown icon for first place winner
- * - Color-coded position indicators
+ - @import { ServerShopSection } from './components/ServerShopSection.tsx';
+ - @import { ServerMapSection } from './components/ServerMapSection.tsx';
  * - Avatar images from mc-heads.net service
  * - Animated hover effects and transitions
  * 
