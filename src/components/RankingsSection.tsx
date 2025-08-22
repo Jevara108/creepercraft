@@ -86,14 +86,12 @@
  * @param {RankingsSectionProps} props - Component props
  * @returns {JSX.Element} Rankings section JSX
  */
-export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, setActiveTab }) => {
   // ==================== STATE MANAGEMENT ====================
   
   /**
    * Server IP copy state
    * @type {boolean} copied - Whether the server IP was recently copied
    */
-  const [copied, setCopied] = useState(false);
 
   // ==================== COMPUTED VALUES ====================
   
@@ -104,16 +102,7 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * 
    * @returns {Player[]} Current rankings array
    */
-  const getCurrentRankings = (): Player[] => {
-    switch (activeTab) {
-      case 'guilds':
-        return guildRankings;
-      case 'kills':
-        return killRankings;
-      default:
-        return playerRankings;
-    }
-  };
+
 
   /**
    * Get Tab Label
@@ -122,10 +111,7 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * 
    * @returns {string} Current tab data label
    */
-  const getTabLabel = (): string => {
-    const config = tabConfigs.find(tab => tab.id === activeTab);
-    return config?.dataLabel || 'Player Points';
-  };
+
 
   // ==================== EVENT HANDLERS ====================
   
@@ -135,11 +121,6 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * Copies the server IP address to the user's clipboard and shows
    * a temporary success message.
    */
-  const copyServerIP = () => {
-    navigator.clipboard.writeText('premium.mightymc.club');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   // ==================== RENDER HELPERS ====================
   
@@ -151,17 +132,6 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * @param {TabConfig} tabConfig - Tab configuration object
    * @returns {JSX.Element} Tab button JSX
    */
-  const renderTabButton = (tabConfig: TabConfig) => (
-    <button 
-      key={tabConfig.id}
-      className={`tab ${activeTab === tabConfig.id ? 'active' : ''}`}
-      onClick={() => setActiveTab(tabConfig.id)}
-      aria-pressed={activeTab === tabConfig.id}
-      aria-label={`View ${tabConfig.label.toLowerCase()}`}
-    >
-      {tabConfig.label}
-    </button>
-  );
 
   /**
    * Render Podium Position
@@ -173,35 +143,6 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * @param {string} orderClass - CSS class for responsive ordering
    * @returns {JSX.Element} Podium position JSX
    */
-  const renderPodiumPosition = (player: Player, position: number, orderClass: string) => {
-    const isFirst = position === 1;
-    const colorClass = position === 1 ? positionColors.first : 
-                     position === 2 ? positionColors.second : 
-                     positionColors.third;
-    
-    return (
-      <div className={`card glass p-6 text-center transform transition-all duration-300 hover:scale-105 ${orderClass} ${isFirst ? 'scale-110 featured relative' : ''}`}>
-        {isFirst && <Crown className="w-6 h-6 text-yellow-400 mx-auto mb-2" />}
-        <div className={`place-label text-4xl ${isFirst ? 'text-5xl' : ''} font-black ${colorClass.split(' ')[0]} mb-2`}>
-          {position}
-        </div>
-        <div className="avatar-wrapper mb-4">
-          <img 
-            src={player.avatar} 
-            alt={`${player.name}'s Minecraft avatar`}
-            className={`${isFirst ? 'w-20 h-20' : 'w-16 h-16'} mx-auto rounded-full border-2 sm:border-4 ${colorClass.split(' ')[1]} hover:scale-105 transition-transform duration-200`}
-            loading="lazy"
-          />
-        </div>
-        <h3 className={`${isFirst ? 'text-xl' : 'text-lg'} font-bold text-white mb-2`}>
-          {player.name}
-        </h3>
-        <div className={`text-grass-green font-bold ${isFirst ? 'text-lg' : ''}`}>
-          {player.level.toLocaleString()}
-        </div>
-      </div>
-    );
-  };
 
   /**
    * Render Leaderboard Entry
@@ -212,26 +153,6 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * @param {number} index - Array index for React key
    * @returns {JSX.Element} Leaderboard entry JSX
    */
-  const renderLeaderboardEntry = (player: Player, index: number) => (
-    <div 
-      key={`${player.name}-${index}`} 
-      className="entry glass p-4 flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
-    >
-      <div className="flex items-center space-x-3">
-        <img 
-          src={player.avatar} 
-          alt={`${player.name}'s Minecraft avatar`}
-          className="w-10 h-10 rounded-full border border-grass-green hover:scale-105 transition-transform duration-200"
-          loading="lazy"
-        />
-        <div>
-          <div className="font-bold text-white">{player.name}</div>
-          <div className="text-sm text-light-gray">{player.level.toLocaleString()}</div>
-        </div>
-      </div>
-      <div className="text-2xl font-black text-grass-green">#{player.rank}</div>
-    </div>
-  );
 
   // ==================== RENDER ====================
   
