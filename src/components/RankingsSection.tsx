@@ -76,6 +76,9 @@ interface TabConfig {
  * @constant {TabConfig[]} tabConfigs
  */
 const tabConfigs: TabConfig[] = [
+  { id: 'players', label: 'PLAYER RANKING', dataLabel: 'Player Points' },
+  { id: 'guilds', label: 'GUILD RANKING', dataLabel: 'Guild Points' },
+  { id: 'kills', label: 'KILL RANKING', dataLabel: 'Kills' }
 ];
 
 /**
@@ -189,7 +192,36 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * @param {string} orderClass - CSS class for responsive ordering
    * @returns {JSX.Element} Podium position JSX
    */
-  );
+  const renderPodiumPosition = (player: Player, position: number, orderClass: string) => {
+    const isFirst = position === 1;
+    const colorClass = position === 1 ? positionColors.first : 
+                     position === 2 ? positionColors.second : 
+                     positionColors.third;
+    
+    return (
+      <div className={`card glass p-6 text-center transform transition-all duration-300 hover:scale-105 ${orderClass} ${isFirst ? 'scale-110 featured relative' : ''}`}>
+        {isFirst && <Crown className="w-6 h-6 text-yellow-400 mx-auto mb-2" />}
+        <div className={`place-label text-4xl ${isFirst ? 'text-5xl' : ''} font-black ${colorClass.split(' ')[0]} mb-2`}>
+          {position}
+        </div>
+        <div className="avatar-wrapper mb-4">
+          <img 
+            src={player.avatar} 
+            alt={`${player.name}'s Minecraft avatar`}
+            className={`${isFirst ? 'w-20 h-20' : 'w-16 h-16'} mx-auto rounded-full border-2 sm:border-4 ${colorClass.split(' ')[1]} hover:scale-105 transition-transform duration-200`}
+            loading="lazy"
+          />
+        </div>
+        <h3 className={`${isFirst ? 'text-xl' : 'text-lg'} font-bold text-white mb-2`}>
+          {player.name}
+        </h3>
+        <div className={`text-grass-green font-bold ${isFirst ? 'text-lg' : ''}`}>
+          {player.level.toLocaleString()}
+        </div>
+      </div>
+    );
+  };
+
   /**
    * Render Leaderboard Entry
    * 
@@ -224,29 +256,27 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
   
   const currentRankings = getCurrentRankings();
   
-    return (
-      <div className={`card glass p-6 text-center transform transition-all duration-300 hover:scale-105 ${orderClass} ${isFirst ? 'scale-110 featured relative' : ''}`}>
-        {isFirst && <Crown className="w-6 h-6 text-yellow-400 mx-auto mb-2" />}
-        <div className={`place-label text-4xl ${isFirst ? 'text-5xl' : ''} font-black ${colorClass.split(' ')[0]} mb-2`}>
-          {position}
+  return (
+    <section id="ranking" className="py-16 sm:py-20 bg-gradient-to-b from-primary-dark to-secondary-dark relative">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-black mb-4 text-white tracking-wider uppercase">
+            RANKINGS
+          </h2>
+          <div className="w-16 h-1 bg-grass-green mx-auto mb-4"></div>
+          <p className="text-lg text-light-gray uppercase tracking-wide">
+            UNFORGETTABLE ADVENTURES
+          </p>
         </div>
-        <div className="avatar-wrapper mb-4">
-          <img 
-            src={player.avatar} 
-            alt={`${player.name}'s Minecraft avatar`}
-            className={`${isFirst ? 'w-20 h-20' : 'w-16 h-16'} mx-auto rounded-full border-2 sm:border-4 ${colorClass.split(' ')[1]} hover:scale-105 transition-transform duration-200`}
-            loading="lazy"
-          />
+
+        {/* Ranking Tabs */}
+        <div className="tabs flex justify-center mb-12">
+          <div className="glass rounded-lg p-1 flex flex-wrap gap-1">
+            {tabConfigs.map(renderTabButton)}
+          </div>
         </div>
-        <h3 className={`${isFirst ? 'text-xl' : 'text-lg'} font-bold text-white mb-2`}>
-          {player.name}
-        </h3>
-        <div className={`text-grass-green font-bold ${isFirst ? 'text-lg' : ''}`}>
-          {player.level.toLocaleString()}
-        </div>
-      </div>
-    );
-  };
 
         {/* Top 3 Players Podium */}
         <div className="top-3-grid grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
