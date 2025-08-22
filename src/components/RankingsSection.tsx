@@ -265,7 +265,7 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
           <h2 className="text-3xl sm:text-4xl font-black mb-4 text-white tracking-wider uppercase">
             
           </h2>
-          <div className="w-16 h-1 bg-grass-green mx-auto mb-4"></div>
+          <div className=""></div>
           <p className="text-lg text-light-gray uppercase tracking-wide">
             
           </p>
