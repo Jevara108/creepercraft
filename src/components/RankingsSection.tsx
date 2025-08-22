@@ -155,29 +155,3 @@
    */
 
   // ==================== RENDER ====================
-              
-              {/* Copy IP Button - Right aligned */}
-              <div className="flex-shrink-0 ml-4">
-                <button 
-                  onClick={copyServerIP}
-                  className={`btn text-xs px-3 py-1.5 group-hover:scale-105 transition-all duration-300 flex items-center space-x-1 ${
-                    copied 
-                      ? 'bg-green-600 text-white' 
-                      : 'btn-green'
-                  }`}
-                  aria-label={copied ? 'Server IP copied to clipboard' : 'Copy server IP to clipboard'}
-                >
-                  {copied ? (
-                    <>
-                      <Check className="w-3 h-3" />
-                      <span>COPIED!</span>
-                    </>
-                  ) : (
-                    <span>COPY IP</span>
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-)
