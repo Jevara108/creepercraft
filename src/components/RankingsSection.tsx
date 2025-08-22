@@ -189,36 +189,7 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
    * @param {string} orderClass - CSS class for responsive ordering
    * @returns {JSX.Element} Podium position JSX
    */
-  const renderPodiumPosition = (player: Player, position: number, orderClass: string) => {
-    const isFirst = position === 1;
-    const colorClass = position === 1 ? positionColors.first : 
-                     position === 2 ? positionColors.second : 
-                     positionColors.third;
-
-    return (
-      <div className={`card glass p-6 text-center transform transition-all duration-300 hover:scale-105 ${orderClass} ${isFirst ? 'scale-110 featured relative' : ''}`}>
-        {isFirst && <Crown className="w-6 h-6 text-yellow-400 mx-auto mb-2" />}
-        <div className={`place-label text-4xl ${isFirst ? 'text-5xl' : ''} font-black ${colorClass.split(' ')[0]} mb-2`}>
-          {position}
-        </div>
-        <div className="avatar-wrapper mb-4">
-          <img 
-            src={player.avatar} 
-            alt={`${player.name}'s Minecraft avatar`}
-            className={`${isFirst ? 'w-20 h-20' : 'w-16 h-16'} mx-auto rounded-full border-2 sm:border-4 ${colorClass.split(' ')[1]} hover:scale-105 transition-transform duration-200`}
-            loading="lazy"
-          />
-        </div>
-        <h3 className={`${isFirst ? 'text-xl' : 'text-lg'} font-bold text-white mb-2`}>
-          {player.name}
-        </h3>
-        <div className={`text-grass-green font-bold ${isFirst ? 'text-lg' : ''}`}>
-          {player.level.toLocaleString()}
-        </div>
-      </div>
-    );
-  };
-
+  );
   /**
    * Render Leaderboard Entry
    * 
