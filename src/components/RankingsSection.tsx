@@ -194,10 +194,6 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
     const colorClass = position === 1 ? positionColors.first : 
                      position === 2 ? positionColors.second : 
                      positionColors.third;
-    
-    return (
-    );
-  };
 
   /**
    * Render Leaderboard Entry
