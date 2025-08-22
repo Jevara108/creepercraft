@@ -155,66 +155,6 @@
    */
 
   // ==================== RENDER ====================
-  
-  const currentRankings = getCurrentRankings();
-  
-  return (
-    <section id="ranking" className="py-16 sm:py-20 bg-gradient-to-b from-primary-dark to-secondary-dark relative">
-      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-        
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-black mb-4 text-white tracking-wider uppercase">
-            RANKINGS
-          </h2>
-          <div className="w-16 h-1 bg-grass-green mx-auto mb-4"></div>
-          <p className="text-lg text-light-gray uppercase tracking-wide">
-            UNFORGETTABLE ADVENTURES
-          </p>
-        </div>
-
-        {/* Ranking Tabs */}
-        <div className="tabs flex justify-center mb-12">
-          <div className="glass rounded-lg p-1 flex flex-wrap gap-1">
-            {tabConfigs.map(renderTabButton)}
-          </div>
-        </div>
-
-        {/* Top 3 Players Podium */}
-        <div className="top-3-grid grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-          {/* Fixed ordering: 1st, 2nd, 3rd on mobile; 2nd, 1st, 3rd on desktop */}
-          {renderPodiumPosition(currentRankings[0], 1, 'order-1 md:order-2')}
-          {renderPodiumPosition(currentRankings[1], 2, 'order-2 md:order-1')}
-          {renderPodiumPosition(currentRankings[2], 3, 'order-3 md:order-3')}
-        </div>
-
-        {/* Extended Leaderboard - Top 20 + Join CTA */}
-        <div className="list-entries grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
-          {currentRankings.slice(3, 20).map(renderLeaderboardEntry)}
-          
-          {/* Join Server CTA positioned right after #20 */}
-          <div className="entry glass p-4 bg-gradient-to-r from-grass-green/10 to-green-600/10 border-2 border-grass-green/30 hover:border-grass-green/50 transition-all duration-300 hover:scale-105 cursor-pointer group relative overflow-hidden">
-            {/* Animated background glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-grass-green/5 to-green-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
-            
-            {/* Floating particles */}
-            <div className="absolute w-1 h-1 bg-grass-green/40 rounded-full animate-float-slow" style={{ top: '20%', left: '15%' }} />
-            <div className="absolute w-1 h-1 bg-green-400/60 rounded-full animate-float-medium" style={{ top: '60%', right: '20%' }} />
-            
-            <div className="relative z-10 flex items-center justify-between w-full">
-              <div className="flex items-center space-x-3 flex-1 min-w-0">
-                <div className="w-10 h-10 bg-grass-green rounded-full border border-grass-green flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                  <Users className="w-5 h-5 text-primary-dark" />
-                </div>
-                <div className="min-w-0">
-                  <div className="font-bold text-white group-hover:text-grass-green transition-colors duration-300">
-                    JOIN OUR SERVER NOW
-                  </div>
-                  <div className="text-sm text-light-gray">
-                    premium.mightymc.club
-                  </div>
-                </div>
-              </div>
               
               {/* Copy IP Button - Right aligned */}
               <div className="flex-shrink-0 ml-4">
