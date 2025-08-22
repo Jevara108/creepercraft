@@ -42,10 +42,6 @@
  * @property {string} activeTab - Currently active ranking tab
  * @property {function} setActiveTab - Function to change active tab
  */
-interface RankingsSectionProps {
-  activeTab: string;
-  setActiveTab: (tab: string) => void;
-}
 
 /**
  * Tab Configuration Interface
@@ -57,11 +53,7 @@ interface RankingsSectionProps {
  * @property {string} label - Display label for the tab
  * @property {string} dataLabel - Label for the data being displayed
  */
-interface TabConfig {
-  id: string;
-  label: string;
-  dataLabel: string;
-}
+
 
 // ==================== CONSTANTS ====================
 
@@ -72,11 +64,7 @@ interface TabConfig {
  * 
  * @constant {TabConfig[]} tabConfigs
  */
-const tabConfigs: TabConfig[] = [
-  { id: 'players', label: 'PLAYER RANKING', dataLabel: 'Player Points' },
-  { id: 'guilds', label: 'GUILD RANKING', dataLabel: 'Guild Points' },
-  { id: 'kills', label: 'KILL RANKING', dataLabel: 'Kills' }
-];
+
 
 /**
  * Position Colors Configuration
@@ -85,11 +73,7 @@ const tabConfigs: TabConfig[] = [
  * 
  * @constant {Object} positionColors
  */
-const positionColors = {
-  first: 'text-yellow-400 border-yellow-400',
-  second: 'text-light-gray border-light-gray',
-  third: 'text-orange-400 border-orange-400'
-};
+
 
 // ==================== COMPONENT ====================
 
