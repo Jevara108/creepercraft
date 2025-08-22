@@ -263,11 +263,11 @@ export const RankingsSection: React.FC<RankingsSectionProps> = ({ activeTab, set
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-black mb-4 text-white tracking-wider uppercase">
-            RANKINGS
+            
           </h2>
           <div className="w-16 h-1 bg-grass-green mx-auto mb-4"></div>
           <p className="text-lg text-light-gray uppercase tracking-wide">
-            UNFORGETTABLE ADVENTURES
+            
           </p>
         </div>
 
