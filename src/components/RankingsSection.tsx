@@ -29,4 +29,3 @@
  * @author CreeperCraft Development Team
  * @version 2.0.0 - Enhanced responsive design and accessibility
  */
-}
