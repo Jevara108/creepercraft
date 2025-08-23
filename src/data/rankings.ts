@@ -78,24 +78,4 @@ export const guildRankings: Player[] = [
  * @constant {Player[]} killRankings
  */
 export const killRankings: Player[] = [
-  { name: 'DeathBringer', level: 2847, rank: 1, avatar: 'https://mc-heads.net/avatar/DeathBringer/64' },
-  { name: 'SoulReaper', level: 2803, rank: 2, avatar: 'https://mc-heads.net/avatar/SoulReaper/64' },
-  { name: 'BloodHunter', level: 2759, rank: 3, avatar: 'https://mc-heads.net/avatar/BloodHunter/64' },
-  { name: 'WarMachine', level: 2715, rank: 4, avatar: 'https://mc-heads.net/avatar/WarMachine/64' },
-  { name: 'KillStreak', level: 2671, rank: 5, avatar: 'https://mc-heads.net/avatar/KillStreak/64' },
-  { name: 'Assassin', level: 2627, rank: 6, avatar: 'https://mc-heads.net/avatar/Assassin/64' },
-  { name: 'Executioner', level: 2583, rank: 7, avatar: 'https://mc-heads.net/avatar/Executioner/64' },
-  { name: 'Slayer', level: 2539, rank: 8, avatar: 'https://mc-heads.net/avatar/Slayer/64' },
-  { name: 'Destroyer', level: 2495, rank: 9, avatar: 'https://mc-heads.net/avatar/Destroyer/64' },
-  { name: 'Terminator', level: 2451, rank: 10, avatar: 'https://mc-heads.net/avatar/Terminator/64' },
-  { name: 'Predator', level: 2407, rank: 11, avatar: 'https://mc-heads.net/avatar/Predator/64' },
-  { name: 'Hunter', level: 2363, rank: 12, avatar: 'https://mc-heads.net/avatar/Hunter/64' },
-  { name: 'Warrior', level: 2319, rank: 13, avatar: 'https://mc-heads.net/avatar/Warrior/64' },
-  { name: 'Fighter', level: 2275, rank: 14, avatar: 'https://mc-heads.net/avatar/Fighter/64' },
-  { name: 'Gladiator', level: 2231, rank: 15, avatar: 'https://mc-heads.net/avatar/Gladiator/64' },
-  { name: 'Champion', level: 2187, rank: 16, avatar: 'https://mc-heads.net/avatar/Champion/64' },
-  { name: 'Conqueror', level: 2143, rank: 17, avatar: 'https://mc-heads.net/avatar/Conqueror/64' },
-  { name: 'Vanquisher', level: 2099, rank: 18, avatar: 'https://mc-heads.net/avatar/Vanquisher/64' },
-  { name: 'Dominator', level: 2055, rank: 19, avatar: 'https://mc-heads.net/avatar/Dominator/64' },
-  { name: 'Overlord', level: 2011, rank: 20, avatar: 'https://mc-heads.net/avatar/Overlord/64' }
 ];
