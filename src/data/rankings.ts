@@ -64,26 +64,6 @@ export const playerRankings: Player[] = [
  * @constant {Player[]} guildRankings
  */
 export const guildRankings: Player[] = [
-  { name: 'DragonSlayers', level: 5420, rank: 1, avatar: 'https://mc-heads.net/avatar/DragonSlayers/64' },
-  { name: 'ShadowWarriors', level: 5380, rank: 2, avatar: 'https://mc-heads.net/avatar/ShadowWarriors/64' },
-  { name: 'CrystalGuards', level: 5340, rank: 3, avatar: 'https://mc-heads.net/avatar/CrystalGuards/64' },
-  { name: 'IronLegion', level: 5300, rank: 4, avatar: 'https://mc-heads.net/avatar/IronLegion/64' },
-  { name: 'FireStorm', level: 5260, rank: 5, avatar: 'https://mc-heads.net/avatar/FireStorm/64' },
-  { name: 'StormBreakers', level: 5220, rank: 6, avatar: 'https://mc-heads.net/avatar/StormBreakers/64' },
-  { name: 'VoidHunters', level: 5180, rank: 7, avatar: 'https://mc-heads.net/avatar/VoidHunters/64' },
-  { name: 'BloodMoon', level: 5140, rank: 8, avatar: 'https://mc-heads.net/avatar/BloodMoon/64' },
-  { name: 'SkyRiders', level: 5100, rank: 9, avatar: 'https://mc-heads.net/avatar/SkyRiders/64' },
-  { name: 'DarkKnights', level: 5060, rank: 10, avatar: 'https://mc-heads.net/avatar/DarkKnights/64' },
-  { name: 'PhoenixRising', level: 5020, rank: 11, avatar: 'https://mc-heads.net/avatar/PhoenixRising/64' },
-  { name: 'ThunderBolts', level: 4980, rank: 12, avatar: 'https://mc-heads.net/avatar/ThunderBolts/64' },
-  { name: 'IceBreakers', level: 4940, rank: 13, avatar: 'https://mc-heads.net/avatar/IceBreakers/64' },
-  { name: 'GoldenEagles', level: 4900, rank: 14, avatar: 'https://mc-heads.net/avatar/GoldenEagles/64' },
-  { name: 'SilverWolves', level: 4860, rank: 15, avatar: 'https://mc-heads.net/avatar/SilverWolves/64' },
-  { name: 'CrimsonTide', level: 4820, rank: 16, avatar: 'https://mc-heads.net/avatar/CrimsonTide/64' },
-  { name: 'EmeraldGuard', level: 4780, rank: 17, avatar: 'https://mc-heads.net/avatar/EmeraldGuard/64' },
-  { name: 'DiamondCrusher', level: 4740, rank: 18, avatar: 'https://mc-heads.net/avatar/DiamondCrusher/64' },
-  { name: 'NetherLords', level: 4700, rank: 19, avatar: 'https://mc-heads.net/avatar/NetherLords/64' },
-  { name: 'EnderWatch', level: 4660, rank: 20, avatar: 'https://mc-heads.net/avatar/EnderWatch/64' }
 ];
 
 // ==================== KILL RANKINGS ====================
