@@ -30,9 +30,7 @@
  * @version 2.0.0 - Enhanced responsive design and accessibility
  */
 
-import React, { useState } from 'react';
-import { Crown, Users, Check } from 'lucide-react';
-import { Player, playerRankings, guildRankings, killRankings } from '../data/rankings';
+
 
 // ==================== INTERFACES ====================
 
