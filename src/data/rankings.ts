@@ -49,9 +49,7 @@ export interface Player {
  * 
  * @constant {Player[]} playerRankings
  */
-export const playerRankings: Player[] = [
-];
-
+export const playerRankings: Player[]
 // ==================== GUILD RANKINGS ====================
 
 /**
@@ -63,8 +61,7 @@ export const playerRankings: Player[] = [
  * 
  * @constant {Player[]} guildRankings
  */
-export const guildRankings: Player[] = [
-];
+export const guildRankings: Player[]
 
 // ==================== KILL RANKINGS ====================
 
@@ -77,5 +74,4 @@ export const guildRankings: Player[] = [
  * 
  * @constant {Player[]} killRankings
  */
-export const killRankings: Player[] = [
-];
+export const killRankings: Player[]
