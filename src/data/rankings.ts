@@ -50,26 +50,6 @@ export interface Player {
  * @constant {Player[]} playerRankings
  */
 export const playerRankings: Player[] = [
-  { name: 'Sketchie', level: 1263, rank: 1, avatar: 'https://mc-heads.net/avatar/Sketchie/64' },
-  { name: 'Bartas10256', level: 1263, rank: 2, avatar: 'https://mc-heads.net/avatar/Bartas10256/64' },
-  { name: 'LordTricker', level: 1263, rank: 3, avatar: 'https://mc-heads.net/avatar/LordTricker/64' },
-  { name: 'PlayerFour', level: 1250, rank: 4, avatar: 'https://mc-heads.net/avatar/PlayerFour/64' },
-  { name: 'PlayerFive', level: 1240, rank: 5, avatar: 'https://mc-heads.net/avatar/PlayerFive/64' },
-  { name: 'PlayerSix', level: 1230, rank: 6, avatar: 'https://mc-heads.net/avatar/PlayerSix/64' },
-  { name: 'PlayerSeven', level: 1220, rank: 7, avatar: 'https://mc-heads.net/avatar/PlayerSeven/64' },
-  { name: 'PlayerEight', level: 1210, rank: 8, avatar: 'https://mc-heads.net/avatar/PlayerEight/64' },
-  { name: 'PlayerNine', level: 1200, rank: 9, avatar: 'https://mc-heads.net/avatar/PlayerNine/64' },
-  { name: 'PlayerTen', level: 1190, rank: 10, avatar: 'https://mc-heads.net/avatar/PlayerTen/64' },
-  { name: 'PlayerEleven', level: 1180, rank: 11, avatar: 'https://mc-heads.net/avatar/PlayerEleven/64' },
-  { name: 'PlayerTwelve', level: 1170, rank: 12, avatar: 'https://mc-heads.net/avatar/PlayerTwelve/64' },
-  { name: 'PlayerThirteen', level: 1160, rank: 13, avatar: 'https://mc-heads.net/avatar/PlayerThirteen/64' },
-  { name: 'PlayerFourteen', level: 1150, rank: 14, avatar: 'https://mc-heads.net/avatar/PlayerFourteen/64' },
-  { name: 'PlayerFifteen', level: 1140, rank: 15, avatar: 'https://mc-heads.net/avatar/PlayerFifteen/64' },
-  { name: 'PlayerSixteen', level: 1130, rank: 16, avatar: 'https://mc-heads.net/avatar/PlayerSixteen/64' },
-  { name: 'PlayerSeventeen', level: 1120, rank: 17, avatar: 'https://mc-heads.net/avatar/PlayerSeventeen/64' },
-  { name: 'PlayerEighteen', level: 1110, rank: 18, avatar: 'https://mc-heads.net/avatar/PlayerEighteen/64' },
-  { name: 'PlayerNineteen', level: 1100, rank: 19, avatar: 'https://mc-heads.net/avatar/PlayerNineteen/64' },
-  { name: 'PlayerTwenty', level: 1090, rank: 20, avatar: 'https://mc-heads.net/avatar/PlayerTwenty/64' }
 ];
 
 // ==================== GUILD RANKINGS ====================
