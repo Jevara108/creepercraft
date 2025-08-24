@@ -142,16 +142,7 @@ function App() {
           />
         </section>
         
-        {/* 
-          Rankings Section
-          Player, guild, and kill leaderboards with tabbed interface
-        */}
-        <section aria-label="Server Rankings and Leaderboards">
-          <RankingsSection 
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-        </section>
+        
         
         {/* 
           Server Shop Section
