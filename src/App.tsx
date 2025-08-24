@@ -19,7 +19,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navigation } from './components/Navigation.tsx';
 import { HeroSection } from './components/HeroSection.tsx';
-import { RankingsSection } from './components/RankingsSection.tsx';
 import { ServerShopSection } from './components/ServerShopSection.tsx';
 import { ServerMapSection } from './components/ServerMapSection.tsx';
 import { VoteSection } from './components/VoteSection.tsx';
@@ -58,11 +57,6 @@ function App() {
    */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  /**
-   * Rankings section tab management
-   * @type {string} activeTab - Currently active ranking tab ('players' | 'guilds' | 'kills')
-   */
-  const [activeTab, setActiveTab] = useState('players');
   
   /**
    * Shop section carousel management
