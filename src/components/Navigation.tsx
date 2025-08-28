@@ -78,7 +78,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
               <CreeperHeadIcon />
             </div>
             {/* Brand name with responsive typography */}
-            <span className="text-lg sm:text-xl font-bold text-white">CREEPERCRAFT</span>
+            <span className="text-lg sm:text-xl font-bold text-purple-500">MightyMC</span>
           </div>
           
           {/* 
@@ -88,7 +88,6 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
           */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <a href="#home" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">HOME</a>
-            <a href="#ranking" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">RANKING</a>
             <a href="#shop" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">SHOP</a>
             <a href="#map" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">MAP</a>
             <a href="#vote" className="text-light-gray hover:text-white transition-colors text-sm font-medium nav-link">VOTE</a>

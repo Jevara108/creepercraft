@@ -68,13 +68,13 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   noIndex = false
 }) => {
   // Default values
-  const defaultTitle = 'Test - Premium Minecraft Server | Hardcore PvP & Guild Wars';
+  const defaultTitle = 'MightyMC - Premium Minecraft Server | Hardcore PvP & Guild Wars';
   const defaultDescription = 'Join CreeperCraft, the ultimate Minecraft server experience with hardcore gameplay, epic guild wars, custom dungeons, and VIP ranks. 260+ active players, 24/7 uptime.';
   const defaultKeywords = 'minecraft server, hardcore minecraft, pvp server, guild wars, minecraft dungeons, vip ranks, minecraft community, survival server, custom minecraft, minecraft pvp';
-  const siteUrl = 'https://creepercraft.net';
+  const siteUrl = 'https://mightymc.net';
   
   // Construct full title
-  const fullTitle = title ? `${title} | CreeperCraft` : defaultTitle;
+  const fullTitle = title ? `${title} | MightyMC` : defaultTitle;
   const metaDescription = description || defaultDescription;
   const metaKeywords = keywords ? `${defaultKeywords}, ${keywords}` : defaultKeywords;
   const canonicalUrl = canonical || siteUrl;
