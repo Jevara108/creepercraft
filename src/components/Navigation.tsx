@@ -155,13 +155,6 @@ export const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpe
                     HOME
                   </a>
                   <a 
-                    href="#ranking" 
-                    className="block px-4 py-3 text-light-gray hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 nav-link"
-                    onClick={handleLinkClick}
-                  >
-                    RANKING
-                  </a>
-                  <a 
                     href="#shop" 
                     className="block px-4 py-3 text-light-gray hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 nav-link"
                     onClick={handleLinkClick}
