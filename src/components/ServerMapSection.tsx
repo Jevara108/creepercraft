@@ -120,7 +120,6 @@ const biomes: BiomeConfig[] = [
     description: 'Fight in the ultimate combat zone',
     icon: '🗡️',
     cssClass: 'spawn-biome',
-    isSpawn: true
   },
   // Row 3
   {
