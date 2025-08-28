@@ -23,7 +23,8 @@
  */
 
 import React from 'react';
-import { ChevronLeft, ChevronRight, Check, X, Shield } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check, X, Crown, Star, Zap, Shield } from 'lucide-react';
+import { ChestComponent } from './ChestComponent';
 import { bundles } from '../data/bundles';
 
 // ==================== INTERFACES ====================
@@ -84,6 +85,55 @@ interface CrateConfig {
  */
 export const ServerShopSection: React.FC<ServerShopSectionProps> = ({ activeSlide, setActiveSlide }) => {
   
+  // ==================== CRATE CONFIGURATIONS ====================
+  
+  /**
+   * Crate Configuration Array
+   * 
+   * Defines all available crates with their complete styling properties.
+   * Each crate has unique theming, pricing, and visual effects.
+   * 
+   * @constant {CrateConfig[]} crateConfigs
+   */
+  const crateConfigs: CrateConfig[] = [
+    { 
+      name: 'Mystery Crate', 
+      price: '€30', 
+      variant: 'mystery',
+      description: 'Common rewards with surprise elements',
+      color: 'brown',
+      bgGradient: 'from-amber-900/20 to-yellow-800/20',
+      borderColor: 'border-amber-600/30',
+      buttonGradient: 'from-amber-700 to-yellow-700',
+      buttonHover: 'hover:from-amber-600 hover:to-yellow-600',
+      glowColor: 'shadow-amber-600/30'
+    },
+    { 
+      name: 'Treasure Crate', 
+      price: '€45', 
+      variant: 'treasure',
+      description: 'Rare golden rewards and valuable items',
+      color: 'gold',
+      bgGradient: 'from-yellow-600/20 to-orange-500/20',
+      borderColor: 'border-yellow-500/30',
+      buttonGradient: 'from-yellow-600 to-orange-600',
+      buttonHover: 'hover:from-yellow-500 hover:to-orange-500',
+      glowColor: 'shadow-yellow-500/30'
+    },
+    { 
+      name: 'Legendary Crate', 
+      price: '€60', 
+      variant: 'legendary',
+      description: 'Epic magical items and exclusive rewards',
+      color: 'purple',
+      bgGradient: 'from-purple-600/20 to-indigo-600/20',
+      borderColor: 'border-purple-500/30',
+      buttonGradient: 'from-purple-600 to-indigo-600',
+      buttonHover: 'hover:from-purple-500 hover:to-indigo-500',
+      glowColor: 'shadow-purple-500/30'
+    }
+  ];
+
   // ==================== RENDER HELPERS ====================
   
   /**
@@ -127,6 +177,23 @@ export const ServerShopSection: React.FC<ServerShopSectionProps> = ({ activeSlid
         );
       default:
         return null;
+    }
+  };
+
+  /**
+   * Get Crate Icon
+   * 
+   * Returns the appropriate icon component for each crate variant.
+   * 
+   * @param {string} variant - Crate variant type
+   * @returns {JSX.Element} Icon component
+   */
+  const getCrateIcon = (variant: string) => {
+    switch (variant) {
+      case 'legendary': return <Crown className="w-4 h-4" />;
+      case 'treasure': return <Star className="w-4 h-4" />;
+      case 'mystery': return <Zap className="w-4 h-4" />;
+      default: return <Zap className="w-4 h-4" />;
     }
   };
 
