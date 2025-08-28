@@ -24,6 +24,7 @@
 
 import React from 'react';
 import { ChevronLeft, ChevronRight, Check, X, Crown, Star, Zap, Shield } from 'lucide-react';
+import { ChestComponent } from './ChestComponent';
 import { bundles } from '../data/bundles';
 
 // ==================== INTERFACES ====================
@@ -49,6 +50,7 @@ interface ServerShopSectionProps {
  * @interface CrateConfig
  * @property {string} name - Display name of the crate
  * @property {string} price - Formatted price with currency
+ * @property {string} variant - Crate type for ChestComponent
  * @property {string} description - Brief description of crate contents
  * @property {string} color - Primary color theme
  * @property {string} bgGradient - Background gradient classes
