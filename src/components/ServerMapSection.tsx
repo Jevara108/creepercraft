@@ -109,17 +109,18 @@ const biomes: BiomeConfig[] = [
     cssClass: 'forest-biome'
   },
   {
+    name: 'Central Hub',
+    description: 'Main spawn lobby',
+    icon: '🏰',
+    cssClass: 'spawn-biome',
+    isSpawn: true
+  },
+  {
     name: 'PvP',
     description: 'Fight in the ultimate combat zone',
     icon: '🗡️',
     cssClass: 'spawn-biome',
     isSpawn: true
-  },
-  {
-    name: 'COMING SOON',
-    description: 'Soon we will post voing for new games',
-    icon: '🏜️',
-    cssClass: 'desert-biome'
   },
   // Row 3
   {
