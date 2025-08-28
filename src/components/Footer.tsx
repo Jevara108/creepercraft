@@ -88,7 +88,6 @@ const footerSections: FooterSection[] = [
     title: 'Site Map',
     links: [
       { href: '#home', label: 'Home' },
-      { href: '#ranking', label: 'Rankings' },
       { href: '#shop', label: 'Shop' },
       { href: '#map', label: 'Server Map' },
       { href: '#vote', label: 'Vote' },
