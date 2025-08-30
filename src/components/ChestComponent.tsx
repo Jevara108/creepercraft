@@ -373,47 +373,5 @@ export const ChestComponent: React.FC<ChestComponentProps> = ({
           Variant-Specific Particle Effects
           Different particle animations for each chest type
         */}
-        
-        {/* Legendary Chest - Magical Effects */}
-        {variant === 'legendary' && (
-          <>
-            {/* Magical Glow Background */}
-            <div 
-              className="absolute inset-0 rounded-lg opacity-60 animate-pulse"
-              style={{
-                background: 'radial-gradient(circle, rgba(147,112,219,0.4) 0%, transparent 70%)',
-                filter: 'blur(6px)',
-                zIndex: -1
-              }}
-            />
-            {/* Floating Magical Particles */}
-            <div className="absolute w-1 h-1 bg-purple-300 rounded-full animate-float-1" style={{ top: '10px', left: '20px' }} />
-            <div className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full animate-float-2" style={{ top: '30px', right: '15px' }} />
-            <div className="absolute w-1 h-1 bg-purple-200 rounded-full animate-float-3" style={{ bottom: '20px', left: '15px' }} />
-            <div className="absolute w-2 h-2 bg-purple-500 rounded-full animate-float-4" style={{ top: '50px', right: '25px' }} />
-          </>
-        )}
-
-        {/* Treasure Chest - Golden Sparkles */}
-        {variant === 'treasure' && (
-          <>
-            <div className="absolute w-2 h-2 bg-yellow-300 rounded-full animate-sparkle-1" style={{ top: '10px', left: '20px' }} />
-            <div className="absolute w-1 h-1 bg-yellow-400 rounded-full animate-sparkle-2" style={{ top: '30px', right: '15px' }} />
-            <div className="absolute w-1.5 h-1.5 bg-yellow-200 rounded-full animate-sparkle-3" style={{ bottom: '20px', left: '15px' }} />
-            <div className="absolute w-1 h-1 bg-yellow-500 rounded-full animate-sparkle-4" style={{ top: '45px', right: '30px' }} />
-            <div className="absolute w-2 h-2 bg-yellow-300 rounded-full animate-sparkle-5" style={{ bottom: '30px', right: '20px' }} />
-          </>
-        )}
-
-        {/* Mystery Chest - Smoke Effects */}
-        {variant === 'mystery' && (
-          <>
-            <div className="absolute w-1 h-1 bg-gray-400 rounded-full animate-smoke-1 opacity-60" style={{ top: '5px', left: '25px' }} />
-            <div className="absolute w-1.5 h-1.5 bg-gray-300 rounded-full animate-smoke-2 opacity-50" style={{ top: '8px', right: '20px' }} />
-            <div className="absolute w-1 h-1 bg-gray-500 rounded-full animate-smoke-3 opacity-70" style={{ top: '12px', left: '50px' }} />
-          </>
-        )}
-      </div>
-    </div>
   );
 };
