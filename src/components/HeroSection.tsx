@@ -341,36 +341,55 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   //);
 //};
 
-const DiscordOnlineCount = () => {
+import { useState, useEffect } from "react";
+import DiscordIcon from "./DiscordIcon"; // Make sure this is imported
+
+const DiscordStatusBox = () => {
   const [onlineCount, setOnlineCount] = useState(0);
 
   useEffect(() => {
     const fetchOnlineCount = async () => {
       try {
-        const res = await fetch('https://discord.com/api/guilds/956030048610160711/widget.json');
+        const res = await fetch(
+          "https://discord.com/api/guilds/956030048610160711/widget.json"
+        );
         const data = await res.json();
-
-        if (data && data.presence_count != null) {
-          setOnlineCount(data.presence_count);
-        } else {
-          setOnlineCount(0);
-        }
+        setOnlineCount(data?.presence_count ?? 0);
       } catch (err) {
-        console.error('Error fetching Discord data:', err);
+        console.error("Error fetching Discord data:", err);
         setOnlineCount(0);
       }
     };
 
     fetchOnlineCount();
-    const interval = setInterval(fetchOnlineCount, 30000); // refresh every 30s
+    const interval = setInterval(fetchOnlineCount, 30000); // Refresh every 30s
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="text-white font-bold text-lg sm:text-xl">
-      {onlineCount} Online
-    </div>
+    <a
+      href="https://discord.gg/tstbYGsK" // Replace with your Discord invite
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 shadow-2xl w-full sm:w-auto max-w-sm">
+        {/* Discord icon */}
+        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
+          <DiscordIcon />
+        </div>
+
+        {/* Text */}
+        <div className="min-w-0">
+          <div className="text-white font-bold text-lg sm:text-xl">
+            {onlineCount} Online
+          </div>
+          <div className="text-blue-400 text-sm font-medium">
+            Join our Discord
+          </div>
+        </div>
+      </div>
+    </a>
   );
 };
 
-export default DiscordOnlineCount;
+export default DiscordStatusBox;
