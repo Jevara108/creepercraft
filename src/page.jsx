@@ -24,7 +24,7 @@ export default function HomePage() {
 
   // --- CONFIGURATION ---
   // Put your server details here.
-  const serverIp = 'play.yourserver.com'; // Change this to your actual server IP
+  const serverIp = 'mightymc.club'; // Change this to your actual server IP
   const discordServerId = '956030048610160711'; // This is your Discord Server ID. It's correct.
 
   // --- DATA FETCHING ---
@@ -34,7 +34,7 @@ export default function HomePage() {
     const fetchDiscordOnlineCount = async () => {
       try {
         // We call the API using the server ID.
-        const response = await fetch(`https://discord.com/api/guilds/${discordServerId}/widget.json` );
+        const response = await fetch(`https://discord.com/api/guilds/956030048610160711/widget.json` );
         
         // If the response is not good, we log an error.
         if (!response.ok) {
