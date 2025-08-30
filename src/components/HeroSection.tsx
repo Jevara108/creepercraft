@@ -291,12 +291,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             Discord Box - Links to Discord server
             Shows online Discord member count
           */}
-          <a 
-            href="https://discord.gg/your-invite-code" // <-- IMPORTANT: Add your invite link here!
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 shadow-2xl w-full sm:w-auto max-w-sm"
-          >
+          <div className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 shadow-2xl w-full sm:w-auto max-w-sm">
             {/* Discord icon with gradient background */}
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
               <DiscordIcon />
@@ -313,3 +308,69 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     </section>
   );
 };
+
+//const YourComponent = () => {
+ // const [playerCount, setPlayerCount] = useState(0);
+
+//useEffect(() => {
+   // const fetchPlayerCount = async () => {
+     // try {
+      //  const res = await fetch('https://api.mcsrvstat.us/46.105.173.194:9010');
+     //   const data = await res.json();
+      //  if (data.online) {
+      //    setPlayerCount(data.players.online);
+      //  } else {
+       //   setPlayerCount(0);
+     //   }
+     // } catch (err) {
+    //    console.error('Error fetching player count:', err);
+     //   setPlayerCount(0);
+    //  }
+  //  };
+
+   // fetchPlayerCount();
+   // const interval = setInterval(fetchPlayerCount, 30000); // Refresh every 30s
+   // return () => clearInterval(interval);
+ // }, []);
+
+ // return (
+    //<div>
+     // {/* Your existing JSX — update {playerCount} where needed */}
+     // <div className="text-white font-bold text-lg sm:text-xl">{playerCount} Players</div>
+   // </div>
+  //);
+//};
+
+const DiscordOnlineCount = () => {
+  const [onlineCount, setOnlineCount] = useState(0);
+
+  useEffect(() => {
+    const fetchOnlineCount = async () => {
+      try {
+        const res = await fetch('https://discord.com/api/guilds/956030048610160711/widget.json');
+        const data = await res.json();
+
+        if (data && data.presence_count != null) {
+          setOnlineCount(data.presence_count);
+        } else {
+          setOnlineCount(0);
+        }
+      } catch (err) {
+        console.error('Error fetching Discord data:', err);
+        setOnlineCount(0);
+      }
+    };
+
+    fetchOnlineCount();
+    const interval = setInterval(fetchOnlineCount, 30000); // refresh every 30s
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="text-white font-bold text-lg sm:text-xl">
+      {onlineCount} Online
+    </div>
+  );
+};
+
+export default DiscordOnlineCount;
