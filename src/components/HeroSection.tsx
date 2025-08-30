@@ -286,7 +286,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
             </div>
           </div>
-
+          
           {/* 
             Discord Box - Links to Discord server
             Shows online Discord member count
@@ -306,3 +306,5 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="min-w-0">
               <div className="text-white font-bold text-lg sm:text-xl">{onlineCount} Online</div>
               <div className="text-blue-400 text-sm font-medium">Join our Discord</div>
+            </div>
+          </a>
