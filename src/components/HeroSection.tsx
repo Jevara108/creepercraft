@@ -341,9 +341,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   //);
 //};
 
-import { useState, useEffect } from "react";
-import DiscordIcon from "./DiscordIcon"; // Make sure this is imported
-
 const DiscordStatusBox = () => {
   const [onlineCount, setOnlineCount] = useState(0);
 
