@@ -257,42 +257,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </a>
         </div>
 
-        {/* Player count and copy status */}
-        <div className="relative z-10 min-w-0">
-          <div className="text-white font-bold text-lg sm:text-xl">
-            {loading ? (
-              <div className="flex items-center space-x-2">
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                <span>Loading...</span>
+        {/* 
+          Server Status Boxes
+          Interactive elements showing player count and Discord info
+        */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-8 animate-fade-in-up-delay-3 px-4">
+          {/* 
+            Players Box - Clickable to copy server IP
+            Shows current player count with copy functionality
+          */}
+          <div 
+            className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 relative overflow-hidden border border-grass-green/20 hover:border-grass-green/40 shadow-2xl w-full sm:w-auto max-w-sm"
+            onClick={copyServerIP}
+          >
+            {/* Animated background pulse effect */}
+            <div className="absolute inset-0 bg-grass-green/10 rounded-2xl animate-pulse"></div>
+            
+            {/* Creeper head icon */}
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-grass-green rounded-xl flex items-center justify-center relative z-10 shadow-lg flex-shrink-0">
+              <CreeperHeadIcon />
+            </div>
+            
+            {/* Player count and copy status */}
+            <div className="relative z-10 min-w-0">
+              <div className="text-white font-bold text-lg sm:text-xl">{playerCount} Players</div>
+              <div className="text-grass-green text-sm font-medium">
+                {copied ? 'IP Copied!' : 'Click to copy'}
               </div>
-            ) : online ? (
-              `${playerCount} Player${playerCount !== 1 ? 's' : ''}`
-            ) : (
-              'Server Offline'
-            )}
+            </div>
           </div>
-          <div className="text-grass-green text-sm font-medium">
-            {copied ? 'IP Copied!' : 'Click to copy'}
-          </div>
-        </div>
-
-        {/* Refresh button */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            fetchServerStatus();
-          }}
-          className="relative z-10 ml-auto p-2 rounded-lg bg-grass-green/20 hover:bg-grass-green/30 transition-colors"
-          title="Refresh status"
-        >
-          <svg className={`w-4 h-4 text-white ${loading ? 'animate-spin' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  );
-};
           
           {/* 
             Discord Box - Links to Discord server
