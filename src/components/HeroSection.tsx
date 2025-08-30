@@ -292,7 +292,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             Shows online Discord member count
           */}
           <a 
-            href="https://discord.gg/tstbYGsK" // <-- IMPORTANT: Add your invite link here!
+            href="https://discord.gg/your-invite-code" // <-- IMPORTANT: Add your invite link here!
             target="_blank" 
             rel="noopener noreferrer"
             className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 shadow-2xl w-full sm:w-auto max-w-sm"
