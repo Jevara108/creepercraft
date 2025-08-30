@@ -306,5 +306,3 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="min-w-0">
               <div className="text-white font-bold text-lg sm:text-xl">{onlineCount} Online</div>
               <div className="text-blue-400 text-sm font-medium">Join our Discord</div>
-            </div>
-          </a>
