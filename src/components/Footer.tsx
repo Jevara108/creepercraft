@@ -271,13 +271,13 @@ export const Footer: React.FC<FooterProps> = ({ playerCount }) => {
             <span className="text-mid-gray text-xs">
               Coded with ❤️ by{' '}
               <a 
-                href="https://bytekron.com" 
+                href="" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-grass-green hover:text-green-400 transition-colors duration-200 font-medium"
-                aria-label="Bytekron - Web Development Agency (opens in new tab)"
+                aria-label=" - Web Development Agency (opens in new tab)"
               >
-                Bytekron
+                
               </a>
             </span>
             
