@@ -291,7 +291,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             Discord Box - Links to Discord server
             Shows online Discord member count
           */}
-          <div className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 shadow-2xl w-full sm:w-auto max-w-sm">
+          <a 
+            href="https://discord.gg/tstbYGsK" // <-- IMPORTANT: Add your invite link here!
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="status-box glass rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 cursor-pointer hover:scale-105 transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 shadow-2xl w-full sm:w-auto max-w-sm"
+          >
             {/* Discord icon with gradient background */}
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
               <DiscordIcon />
@@ -302,7 +307,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="text-white font-bold text-lg sm:text-xl">{onlineCount} Online</div>
               <div className="text-blue-400 text-sm font-medium">Join our Discord</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
