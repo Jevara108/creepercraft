@@ -137,22 +137,6 @@ const staffMembers: StaffMember[] = [
     quote: 'Every new player deserves a warm welcome!'
   },
   {
-    id: 5,
-    name: 'Jevara_VG',
-    role: 'MightyMC Owner',
-    roleType: 'owner',
-    description: 'Founder and visionary behind CreeperCraft. Oversees all server operations and community growth.',
-    avatar: 'https://mc-heads.net/avatar/Jevara_VG/128',
-    joinDate: '2016-03-15',
-    experience: 8,
-    specialties: ['Server Management', 'Community Building', 'Strategic Planning'],
-    online: true,
-    timezone: 'SYD',
-    contact: 'Discord: jeafara#8513',
-    helpedPlayers: 5000,
-    quote: 'Building the ultimate Minecraft experience, one block at a time.'
-  },
-  {
     id: 6,
     name: 'Coming',
     role: 'Master Builder',
