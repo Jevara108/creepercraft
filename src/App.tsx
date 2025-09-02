@@ -17,16 +17,18 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Navigation } from './components/Navigation.tsx';
-import { HeroSection } from './components/HeroSection.tsx';
-import { ServerShopSection } from './components/ServerShopSection.tsx';
-import { ServerMapSection } from './components/ServerMapSection.tsx';
-import { VoteSection } from './components/VoteSection.tsx';
-import { BansSection } from './components/BansSection.tsx';
-import { StaffSection } from './components/StaffSection.tsx';
-import { FAQSection } from './components/FAQSection.tsx';
-import { Footer } from './components/Footer.tsx';
-import { BackToTopButton } from './components/BackToTopButton.tsx';
+import { useDiscordStats } from './hooks/useDiscordStats';
+import { useMinecraftStats } from './hooks/useMinecraftStats';
+import { Navigation } from './components/Navigation';
+import { HeroSection } from './components/HeroSection';
+import { ServerShopSection } from './components/ServerShopSection';
+import { ServerMapSection } from './components/ServerMapSection';
+import { VoteSection } from './components/VoteSection';
+import { BansSection } from './components/BansSection';
+import { StaffSection } from './components/StaffSection';
+import { FAQSection } from './components/FAQSection';
+import { Footer } from './components/Footer';
+import { BackToTopButton } from './components/BackToTopButton';
 
 /**
  * Main App Component
@@ -38,18 +40,24 @@ function App() {
   // ==================== STATE MANAGEMENT ====================
   
   /**
+   * Server Configuration
+   * Update these values with your actual server details
+   */
+  const SERVER_IP = 'play.zaosmc.com'; // Your Minecraft server IP
+  const DISCORD_INVITE = 'https://discord.gg/PJu5qUfUbA'; // Your Discord invite URL
+  
+  /**
+   * Live Statistics Hooks
+   * These hooks fetch live data and fall back to static values if no server details provided
+   */
+  const discordStats = useDiscordStats(DISCORD_INVITE, 5000);
+  const minecraftStats = useMinecraftStats(SERVER_IP, 139);
+  
+  /**
    * Server IP copy state
    * @type {boolean} copied - Whether the server IP was recently copied
    */
   const [copied, setCopied] = useState(false);
-  
-  /**
-   * Live player count simulation
-   * @type {number} playerCount - Current total registered players
-   * @type {number} onlineCount - Current online players
-   */
-  const [playerCount, setPlayerCount] = useState(260);
-  const [onlineCount, setOnlineCount] = useState(139);
   
   /**
    * Mobile navigation state
@@ -57,6 +65,11 @@ function App() {
    */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
+  /**
+   * Rankings section tab management
+   * @type {string} activeTab - Currently active ranking tab ('players' | 'guilds' | 'kills')
+   */
+  const [activeTab, setActiveTab] = useState('players');
   
   /**
    * Shop section carousel management
@@ -65,39 +78,20 @@ function App() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   // ==================== EFFECTS ====================
-  
-  /**
-   * Live Player Count Simulation
-   * 
-   * Simulates real-time player count updates to make the site feel dynamic.
-   * Updates every 5 seconds with small random variations.
-   * 
-   * In a real application, this would be replaced with WebSocket connections
-   * or periodic API calls to get actual server statistics.
-   */
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Simulate small fluctuations in player count (-1 to +1)
-      setPlayerCount(prev => prev + Math.floor(Math.random() * 3) - 1);
-      setOnlineCount(prev => prev + Math.floor(Math.random() * 3) - 1);
-    }, 5000);
-    
-    // Cleanup interval on component unmount
-    return () => clearInterval(interval);
-  }, []);
 
   // ==================== EVENT HANDLERS ====================
   
   /**
    * Copy Server IP to Clipboard
    * 
-   * Copies the server IP address to the user's clipboard and shows
-   * a temporary success message. Uses the modern Clipboard API.
+   * Copies the server IP address to clipboard. Uses configured SERVER_IP
+   * or falls back to default if not configured.
    * 
    * @function copyServerIP
    */
   const copyServerIP = () => {
-    navigator.clipboard.writeText('premium.mightymc.club');
+    const ipToCopy = SERVER_IP || 'play.zaosmc.com';
+    navigator.clipboard.writeText(ipToCopy);
     setCopied(true);
     
     // Reset copied state after 2 seconds
@@ -135,14 +129,25 @@ function App() {
         */}
         <section aria-label="Welcome to CreeperCraft">
           <HeroSection 
-            playerCount={playerCount}
-            onlineCount={onlineCount}
+            onlineCount={minecraftStats.playerCount}
+            discordCount={discordStats.memberCount}
+            serverOnline={minecraftStats.online}
+            loading={minecraftStats.loading || discordStats.loading}
             copied={copied}
             copyServerIP={copyServerIP}
           />
         </section>
         
-        
+        {/* 
+          Rankings Section
+          Player, guild, and kill leaderboards with tabbed interface
+        */}
+        <section aria-label="Server Rankings and Leaderboards">
+          <RankingsSection 
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        </section>
         
         {/* 
           Server Shop Section
@@ -201,7 +206,7 @@ function App() {
         Site links, social media, and additional server info
       */}
       <footer role="contentinfo" aria-label="Site Footer">
-        <Footer playerCount={playerCount} />
+        <Footer playerCount={minecraftStats.playerCount} />
       </footer>
 
       {/* 
