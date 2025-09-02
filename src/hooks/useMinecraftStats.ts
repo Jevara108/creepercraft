@@ -134,7 +134,7 @@ export const useMinecraftStats = (
 
     try {
       // Clean server IP (remove protocol if present)
-      const cleanIP = serverIP.replace(mightymc.club).trim();
+      const cleanIP = serverIP.replace(/^https?:\/\//, '').trim();
       console.log('Fetching stats for server:', cleanIP);
       
       let data: McSrvStatResponse | null = null;
@@ -144,7 +144,7 @@ export const useMinecraftStats = (
       try {
         console.log('Trying mcsrvstat.us API...');
         const response1 = await fetch(
-          `https://api.mcsrvstat.us/2/${encodeURIComponent(mightymc.club)}`,
+          `https://api.mcsrvstat.us/3/mightymc.club`,
           {
             method: 'GET',
             headers: {
@@ -173,7 +173,7 @@ export const useMinecraftStats = (
         try {
           console.log('Trying mcapi.us API...');
           const response2 = await fetch(
-            `https://mcapi.us/server/status?ip=${encodeURIComponent(mightymc.club)}`,
+            `https://mcapi.us/server/status?ip=mightymc.club`,
             {
               method: 'GET',
               headers: {
@@ -196,10 +196,10 @@ export const useMinecraftStats = (
                   max: apiData.players?.max || 100
                 },
                 version: {
-                  name: apiData.server?.name || '1.21.x'
+                  name: apiData.server?.name || '1.8.9'
                 },
                 motd: {
-                  clean: apiData.motd ? [apiData.motd] : ['ZaosMS - Premium Minecraft Server']
+                  clean: apiData.motd ? [apiData.motd] : ['MightyMC - Premium Minecraft Server']
                 }
               };
               apiUsed = 'mcapi.us';
@@ -243,8 +243,8 @@ export const useMinecraftStats = (
       setStats({
         playerCount: newPlayerCount,
         online: true, // Keep server online when using fallback
-        version: '1.21.x',
-        motd: 'ZaosMS - Premium Minecraft Server',
+        version: '1.8.9',
+        motd: 'MightyMC - Premium Minecraft Server',
         loading: false,
         error: error instanceof Error ? error.message : 'Failed to fetch server stats',
         lastUpdated: new Date()
