@@ -43,8 +43,8 @@ function App() {
    * Server Configuration
    * Update these values with your actual server details
    */
-  const SERVER_IP = 'play.zaosmc.com'; // Your Minecraft server IP
-  const DISCORD_INVITE = 'https://discord.gg/PJu5qUfUbA'; // Your Discord invite URL
+  const SERVER_IP = 'mightymc.club'; // Your Minecraft server IP
+  const DISCORD_INVITE = 'https://discord.gg/HskUVye3mr'; // Your Discord invite URL
   
   /**
    * Live Statistics Hooks
@@ -90,7 +90,7 @@ function App() {
    * @function copyServerIP
    */
   const copyServerIP = () => {
-    const ipToCopy = SERVER_IP || 'play.zaosmc.com';
+    const ipToCopy = SERVER_IP || 'mightymc.club';
     navigator.clipboard.writeText(ipToCopy);
     setCopied(true);
     
@@ -135,17 +135,6 @@ function App() {
             loading={minecraftStats.loading || discordStats.loading}
             copied={copied}
             copyServerIP={copyServerIP}
-          />
-        </section>
-        
-        {/* 
-          Rankings Section
-          Player, guild, and kill leaderboards with tabbed interface
-        */}
-        <section aria-label="Server Rankings and Leaderboards">
-          <RankingsSection 
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
           />
         </section>
         
