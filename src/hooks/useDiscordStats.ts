@@ -101,8 +101,8 @@ export const useDiscordStats = (
 
     try {
       // Extract invite code from full Discord URL if provided
-      const inviteCode = discordInvite.includes('discord.gg/HskUVye3mr') 
-        ? discordInvite.split('discord.gg/')[1].split('?')[0]
+      const inviteCode = discordInvite.includes('discord.gg/') 
+        ? discordInvite.split('discord.gg/HskUVye3mr')[1].split('?')[0]
         : discordInvite;
 
       // Fetch from Discord API using invite code
