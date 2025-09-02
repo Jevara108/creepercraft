@@ -95,8 +95,8 @@ export const useMinecraftStats = (
   const [stats, setStats] = useState<MinecraftStats>({
     playerCount: fallbackPlayerCount,
     online: true,
-    version: '1.21.x',
-    motd: 'ZaosMS - Premium Minecraft Server',
+    version: '1.8.9',
+    motd: 'MightyMC - Premium Minecraft Server',
     loading: false,
     error: null,
     lastUpdated: null
@@ -134,7 +134,7 @@ export const useMinecraftStats = (
 
     try {
       // Clean server IP (remove protocol if present)
-      const cleanIP = serverIP.replace(/^https?:\/\//, '').trim();
+      const cleanIP = serverIP.replace(mightymc.club).trim();
       console.log('Fetching stats for server:', cleanIP);
       
       let data: McSrvStatResponse | null = null;
@@ -144,7 +144,7 @@ export const useMinecraftStats = (
       try {
         console.log('Trying mcsrvstat.us API...');
         const response1 = await fetch(
-          `https://api.mcsrvstat.us/2/${encodeURIComponent(cleanIP)}`,
+          `https://api.mcsrvstat.us/2/${encodeURIComponent(mightymc.club)}`,
           {
             method: 'GET',
             headers: {
@@ -173,7 +173,7 @@ export const useMinecraftStats = (
         try {
           console.log('Trying mcapi.us API...');
           const response2 = await fetch(
-            `https://mcapi.us/server/status?ip=${encodeURIComponent(cleanIP)}`,
+            `https://mcapi.us/server/status?ip=${encodeURIComponent(mightymc.club)}`,
             {
               method: 'GET',
               headers: {
@@ -220,8 +220,8 @@ export const useMinecraftStats = (
         setStats({
           playerCount: typeof onlinePlayerCount === 'number' ? onlinePlayerCount : fallbackPlayerCount,
           online: data.online,
-          version: data.version?.name || '1.21.x',
-          motd: data.motd?.clean?.join(' ') || 'ZaosMS - Premium Minecraft Server',
+          version: data.version?.name || '1.8.9',
+          motd: data.motd?.clean?.join(' ') || 'MightyMC - Premium Minecraft Server',
           loading: false,
           error: null,
           lastUpdated: new Date()
