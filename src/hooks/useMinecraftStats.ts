@@ -96,7 +96,7 @@ export const useMinecraftStats = (
     playerCount: fallbackPlayerCount,
     online: true,
     version: '1.21.x',
-    motd: 'ZaosMS - Premium Minecraft Server',
+    motd: 'MightyMC - Premium Minecraft Server',
     loading: false,
     error: null,
     lastUpdated: null
@@ -199,7 +199,7 @@ export const useMinecraftStats = (
                   name: apiData.server?.name || '1.21.x'
                 },
                 motd: {
-                  clean: apiData.motd ? [apiData.motd] : ['ZaosMS - Premium Minecraft Server']
+                  clean: apiData.motd ? [apiData.motd] : ['MightyMC - Premium Minecraft Server']
                 }
               };
               apiUsed = 'mcapi.us';
@@ -221,7 +221,7 @@ export const useMinecraftStats = (
           playerCount: typeof onlinePlayerCount === 'number' ? onlinePlayerCount : fallbackPlayerCount,
           online: data.online,
           version: data.version?.name || '1.21.x',
-          motd: data.motd?.clean?.join(' ') || 'ZaosMS - Premium Minecraft Server',
+          motd: data.motd?.clean?.join(' ') || 'MightyMC - Premium Minecraft Server',
           loading: false,
           error: null,
           lastUpdated: new Date()
@@ -244,7 +244,7 @@ export const useMinecraftStats = (
         playerCount: newPlayerCount,
         online: true, // Keep server online when using fallback
         version: '1.21.x',
-        motd: 'ZaosMS - Premium Minecraft Server',
+        motd: 'MightyMC - Premium Minecraft Server',
         loading: false,
         error: error instanceof Error ? error.message : 'Failed to fetch server stats',
         lastUpdated: new Date()
