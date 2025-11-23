@@ -241,12 +241,10 @@ export const ServerShopSection: React.FC<ServerShopSectionProps> = ({ activeSlid
             DISCOVER OUR SERVICES
           </span>
           <h2 className="text-4xl font-black mb-4 text-white tracking-wider uppercase">SERVER SHOP</h2>
-          <p className="text-lg text-light-gray max-w-2xl">Join our dynamic game and experience the best gameplay in Hardcore mode</p>
         </div>
 
         {/* Bundles Carousel Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-white uppercase tracking-wide">SETS</h3>
           <div className="bundles-carousel glass rounded-2xl p-6 relative">
             {/* Navigation arrows */}
             <button 
@@ -287,9 +285,6 @@ export const ServerShopSection: React.FC<ServerShopSectionProps> = ({ activeSlid
               <div className="text-center">
                 <div className="w-48 h-48 mx-auto flex items-center justify-center">
                   <img 
-                    src="https://mc-heads.net/body/MHF_Steve/200" 
-                    alt="Minecraft Character" 
-                    className="w-32 h-48 object-contain drop-shadow-2xl"
                   />
                 </div>
               </div>

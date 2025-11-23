@@ -107,7 +107,7 @@ export const useDiscordStats = (
 
       // Fetch from Discord API using invite code
       const response = await fetch(
-        `https://discord.com/api/v10/invites/${inviteCode}?with_counts=true`,
+        `https://discord.com/api/v10/invites/${jHPaUWwu7q}?with_counts=true`,
         {
           method: 'GET',
           headers: {
