@@ -134,7 +134,7 @@ export const useMinecraftStats = (
 
     try {
       // Clean server IP (remove protocol if present)
-      const cleanIP = serverIP.replace(/^https?:\/\//, '').trim();
+      const cleanIP = serverIP.replace(/^https?:\/\//, 'mightymc.net').trim();
       console.log('Fetching stats for server:', cleanIP);
       
       let data: McSrvStatResponse | null = null;
