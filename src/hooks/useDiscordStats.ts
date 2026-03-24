@@ -1,7 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
 
-// ==================== INTERFACES ====================
-
 interface DiscordStats {
   memberCount: number;
   loading: boolean;
@@ -11,17 +9,15 @@ interface DiscordStats {
 
 interface DiscordApiResponse {
   approximate_member_count: number;
-  approximate_presence_count: number;
+  approximate_presence_count: number; // This is the "Online" number
 }
-
-// ==================== HOOK ====================
 
 /**
  * Use Discord Statistics Hook
- * * Fetches live Discord server stats using the invite code: bpf58wac4M
+ * Corrected to fetch live online player counts for invite: bpf58wac4M
  */
 export const useDiscordStats = (
-  discordInvite: string = 'bpf58wac4M', // Your specific invite code
+  discordInvite: string = 'bpf58wac4M', // Default to your invite
   fallbackMemberCount: number = 0
 ): DiscordStats => {
   const [stats, setStats] = useState<DiscordStats>({
@@ -32,15 +28,12 @@ export const useDiscordStats = (
   });
 
   const fetchDiscordStats = useCallback(async () => {
-    if (!discordInvite) return;
-
     setStats(prev => ({ ...prev, loading: true, error: null }));
 
     try {
-      // Extract code if a full link is accidentally passed
+      // Clean parsing logic to get the code 'bpf58wac4M' correctly
       const inviteCode = discordInvite.split('/').pop()?.split('?')[0] || discordInvite;
 
-      // Fetch from Discord API v10
       const response = await fetch(
         `https://discord.com/api/v10/invites/${inviteCode}?with_counts=true`
       );
@@ -52,26 +45,28 @@ export const useDiscordStats = (
       const data: DiscordApiResponse = await response.json();
 
       setStats({
-        // Use approximate_presence_count for "Online Now" or member_count for "Total"
-        memberCount: data.approximate_presence_count || fallbackMemberCount,
+        // We use 'approximate_presence_count' for "Online Now"
+        memberCount: data.approximate_presence_count || 0,
         loading: false,
         error: null,
         lastUpdated: new Date()
       });
 
     } catch (error) {
-      console.warn('Discord fetch failed:', error);
-      setStats({
-        memberCount: fallbackMemberCount,
+      console.error('Discord fetch error:', error);
+      setStats(prev => ({
+        ...prev,
         loading: false,
-        error: error instanceof Error ? error.message : 'Failed to fetch',
-        lastUpdated: new Date()
-      });
+        error: error instanceof Error ? error.message : 'Failed to fetch'
+      }));
     }
-  }, [discordInvite, fallbackMemberCount]);
+  }, [discordInvite]);
 
   useEffect(() => {
     fetchDiscordStats();
+    // Optional: Refresh every 5 minutes
+    const interval = setInterval(fetchDiscordStats, 300000);
+    return () => clearInterval(interval);
   }, [fetchDiscordStats]);
 
   return stats;
