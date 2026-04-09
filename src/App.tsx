@@ -90,7 +90,7 @@ function App() {
    * @function copyServerIP
    */
   const copyServerIP = () => {
-    const ipToCopy = SERVER_IP || 'mightymc.club';
+    const ipToCopy = SERVER_IP || 'premium.mightymc.club';
     navigator.clipboard.writeText(ipToCopy);
     setCopied(true);
     
